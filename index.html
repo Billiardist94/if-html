@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
     <style type="text/css">
 
         h1 {
             font-size: 200%;
             font-family: Arial;
-            color: #8b23fc;
+            color: #ff7900;
         }
-        p {
+        p, ol, table {
             font-size: 120%;
             font-family: Cambria;
-            color: #f66e23;
+            color: #000000
         }
+        /*p {*/
+        /*    text-indent: 20px;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -22,7 +26,148 @@
         <h1>Моя первая страница</h1>
     </div>
     <div>
+        <img src="image.svg" width="128" height="128" alt="html5">
         <a href="about/index.html"><img src="Об авторе.png" alt="Об авторе"></a>
+    </div>
+<hr>
+    <div>
+        <h2>&#167 1</h2>
+        <p><strong>Front-end разработчик</strong> – одна из самых востребованных и популярных профессий в сфере информационных технологий. Это одна из причин, почему я выбрал это направление разработки.
+            Также, можно сказать, <em>Front-end разработчик</em> - это человек, обладающий широким взглядом и правильным позиционирование на расстановку предметов в интерьере, будь то зеркало в прихожей, цвет штор в спальной комнате, качественное освещение. Владение этими принципами в быту, поможет разработчику Front-end создавать ненавязчивые, удобные в обращении и приятные глазу веб-приложения и сайты.
+            Поскольку я хорошо владею этими принципами в быту, мне поможет это стать успешным <em>Front-end разработчиком</em> и будет являться моими сильными качествами разработчика. 🙂</p>
+        <p>Front-end мне нравится за то, что ты сразу видишь результат своей работы. Надо настроить себя на то, что не сразу все может получаться, но терпение и азарт помогут прийти к успеху.
+            Разработка помогает всегда быть в тренде, поскольку разработчик обязан следовать моде, как стилистике приложений, так и к изменяющимся потребностям в приложениях. 💻</p>
+        <hr>
+    </div>
+        <h2>&#167 2</h2>
+    <div>
+        <ol>
+            <li>Знакомство с Web</li>
+                <ul>
+                    <li>Краткая история Web и что такое интернет.</li>
+                    <li>Как устроен браузер и как он получает страницы по сети.</li>
+                    <li>Что такое Git?</li>
+                    <li>Создание первого репозитория.</li>
+                    <li>О файле .gitignore.</li>
+                </ul>
+            <li>HTML-вёрстка &#8211; первые шаги</li>
+                <ul>
+                    <li>Настройка рабочей среды.</li>
+                    <li>Краткая история HTML.</li>
+                    <li>Какие бывают теги и что такое атрибут.</li>
+                    <li>Теги для работы с текстом.</li>
+                    <li>Создание собственной страницы.</li>
+                </ul>
+            <li>Погружение в HTML-разметку</li>
+                <ul>
+                    <li>Мета-теги.</li>
+                    <li>Мнемоники.</li>
+                    <li>Тег для работы с изображениями.</li>
+                    <li>Теги для работы со списками.</li>
+                    <li>Теги для работы с таблицами.</li>
+                    <li>Теги для работы с формами.</li>
+                    <li>Div-блоки</li>
+                </ul>
+        </ol>
+    </div>
+<hr>
+    <div>
+        <h2>&#167 3</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&#60;table&#62;</td>
+                    <td>Defines a table</td>
+                </tr>
+                <tr>
+                    <td>&#60;tr&#62;</td>
+                    <td>Defines a row in table</td>
+                </tr>
+                <tr>
+                    <td>&#60;th&#62;</td>
+                    <td rowspan="2">Defines a "header cell"/"cell" in a table</td>
+                </tr>
+                <tr>
+                    <td>&#60;td&#62;</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Rarely used</td>
+                </tr>
+                <tr>
+                    <td>&#60;caption&#62;</td>
+                    <td>Defines a table caption</td>
+                </tr>
+                <tr>
+                    <td>&#60;thead&#62;</td>
+                    <td>Groups the header content in a table</td>
+                </tr>
+                <tr>
+                    <td>&#60;tbody&#62;</td>
+                    <td>Groups the body content in a table</td>
+                </tr>
+                <tr>
+                    <td>&#60;tfoot&#62;</td>
+                    <td>Groups the footer in a table</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<hr>
+    <div>
+        <h2>&#167 4</h2>
+        <form action="/" method="get">
+            <fieldset>
+                <legend>My first form</legend>
+                <section>
+                    <p><label for="user_name">Name</label><br>
+                    <input type="text" id="user_name" name="user_name" placeholder="Name" required></p>
+                    <p><label for="user_email">Email</label><br>
+                    <input type="email" id="user_email" name="user_email" required></p>
+                    <p><label for="user_password">Password</label><br>
+                    <input type="password" id="user_password" name="user_password" required></p>
+                    <p><label for="user_level">Your programming level</label><br>
+                    <input type="range" id="user_level" name="user_level" min="1" max="10" step="1" value="5"></p>
+                </section>
+                <section>
+                    <p>What does HTML stand for?</p>
+                    <p><input type="checkbox" id="first_checkbox" name="first_checkbox">
+                    <label for="first_checkbox">Hyperlinks and Text Markup Language</label></p>
+                    <p><input type="checkbox" id="second_checkbox" name="second_checkbox">
+                    <label for="second_checkbox">Home Tool Markup Language</label></p>
+                    <p><input type="checkbox" id="third_checkbox" name="third_checkbox">
+                    <label for="third_checkbox">Hyper Text Markup Language</label></p>
+                </section>
+                <section>
+                    <p>What does HTTP stand for?</p>
+                    <p><input type="radio" id="first_radio" name="radio">
+                    <label for="first_radio">Hyper Text Translate Protocol</label></p>
+                    <p><input type="radio" id="second_radio" name="radio">
+                    <label for="second_radio">Hyper Text Transmission Protocol</label></p>
+                    <p><input type="radio" id="third_radio" name="radio">
+                    <label for="third_radio">Hyper Text Transfer Protocol</label></p>
+                </section>
+                <section>
+                    <label for="user_comment">Comment</label><br>
+                    <textarea id="user_comment" name="user_comment" placeholder="Comment" maxlength="500"></textarea>
+                </section>
+                <section>
+                    <p><label for="datalist">What does HTML stand for?</label></p>
+                    <p><input id="datalist" name="datalist" list="your_answer" placeholder="Your answer">
+                    <datalist id="your_answer">
+                        <option value="Hyperlinks and Text Markup Language"></option>
+                        <option value="Home Tool Markup Language"></option>
+                        <option value="Hyper Text Markup Language"></option>
+                    </datalist></p>
+                </section>
+                <p><button type="submit">Send</button></p>
+            </fieldset>
+        </form>
     </div>
 </body>
 </html>
