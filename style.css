@@ -1,32 +1,44 @@
-*{
-    font-family: Arial;
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v20-latin-regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/roboto-v20-latin-500.woff') format('woff');
+}
+body{
+    margin: 0;
+    padding: 0;
 }
 .offers-block{
-    max-width: 1000px;
-    min-width: 460px;
-    /*background-color: aquamarine;*/
-    margin-left: auto;
-    margin-right: auto;
-    padding: 40px 20px 40px 20px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    font-family: 'Roboto', sans-serif;
+    color: #383838;
 
-}
-.offers-block-inner{
-    /*background-color: #71e5f8;*/
-    margin-bottom: 20px;
 }
 .offers-block-header {
     text-align: center;
-    margin-bottom: 50px;
-    /*background-color: lightpink;*/
+    margin-bottom: 80px;
+    font-size: 40px;
+    font-weight: 500;
 }
 .offers-cards{
     display: flex;
-    margin-right: 30px;
-    margin-left: 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: baseline;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 1240px;
 }
 .offers-item{
-    /*background-color: #d4f6a3;*/
-    flex-grow: 1;
+    width: 295px;
+    height: 180px;
 }
 .offers-icon{
     margin: auto;
@@ -39,15 +51,55 @@
     margin: auto;
     text-align: center
 }
-img[src]{
-    width: 64px;
-    height: 64px;
+.offers-block-header h3{
+    margin: 0;
+    font-weight: 500;
 }
 hr{
-    width: 70px;
+    width: 100px;
+    border: none;
     height: 4px;
-    background: #ffa057;
+    background: #F5BD41;
 }
-#home-guests{
-    background-color: #e1e2ef;
+.footer{
+    background-color: #10367c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 270px 65px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-card{
+    line-height: 24px;
+
+}
+.footer-card h4{
+    margin: 0;
+    font-weight: 500;
+}
+.footer-card a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: #9cd6ff;
+}
+.copyright{
+    font-size: 14px;
+    line-height: 16px;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-right: 270px ;
+    padding-bottom: 120px;
+    padding-left: 100px;
 }
