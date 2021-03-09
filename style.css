@@ -16,7 +16,7 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-body, ul, h1, h4, p, input{
+body, ul, h1, h4, p, input, hr{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -24,23 +24,38 @@ body, ul, h1, h4, p, input{
     font-weight: normal;
 }
 /*Header block start*/
-.header{
+.header {
     color: #FFFFFF;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-
+    padding-top: 50px;
 }
-.header-wrapper{
+.header div{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    padding-top: 50px;
-
+}
+.header-nav{
+    display: flex;
+    flex-wrap: wrap;
 }
 .header-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    list-style: none;
+    padding-top: 20px;
+}
+.line{
+    width: 50px;
+    border: none;
+    height: 4px;
+    background: #F5BD41;
+    margin: 12px auto;
+}
+.header-icons{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -49,25 +64,21 @@ body, ul, h1, h4, p, input{
 .header-item{
     margin-right: 24px;
 }
-.header-item:last-child{
+.header-icons .header-item:last-child{
     margin-right: 0;
 }
 .header-item:nth-child(2){
     margin-right: 48px;
 }
-.header-link{
+.header-point{
     color: #FFFFFF;
     font-size: 24px;
     line-height: 28px;
-    text-decoration: none;
-}
-.header-link:focus, .header-link:active, .header-link:hover{
-    color: #F5BD41;
-    text-decoration: underline;
 }
 .wrapper{
     max-width: 1230px;
     margin: 0 auto;
+
 }
 /*Header block end*/
 
@@ -85,7 +96,6 @@ body, ul, h1, h4, p, input{
     font-size: 50px;
     line-height: 59px;
     color: #FFFFFF;
-    max-width: 542px;
     margin-bottom: 100px;
 }
 
@@ -96,7 +106,7 @@ body, ul, h1, h4, p, input{
     margin: 0 auto;
     max-width: 1230px;
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 .search-form-info{
 
@@ -232,6 +242,7 @@ body, ul, h1, h4, p, input{
     font-weight: 500;
 }
 hr{
+    margin: 20px auto;
     width: 100px;
     border: none;
     height: 4px;
