@@ -7,6 +7,79 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+<header class="header">
+    <div class="wrapper">
+        <div class="header-logo">
+            <a href="#" class="header-logo-link">
+                <img src="images/header-logo.svg" alt="TripHouse">
+            </a>
+        </div>
+        <nav class="header-nav">
+            <ul class="header-list">
+                <li class="header-item"><p class="header-point">Stays</p>
+                    <hr class="line">
+                </li>
+                <li class="header-item"><p class="header-point">Attractions</p></li>
+            </ul>
+            <ul class="header-icons">
+                <li class="header-item"><p class="header-point"><img src="images/moon-icon.svg" alt="night-theme"></p></li>
+                <li class="header-item"><p class="header-point"><img src="images/user-logo.svg" alt="user-logo"></p></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main">
+    <section class="intro">
+        <div class="wrapper">
+            <h1 class="intro-title">Discover stays<br>to live, work or just relax
+            </h1>
+            <form action="#" class="search-form" method="POST">
+
+                <div class="search-form-info">
+                    <div class="search-form-label">
+                        <label for="search-form-field">Your destination or hotel name</label>
+                    </div>
+                    <div class="search-form-field">
+                        <input type="text" class="search-input-place" id="search-form-field" name="city" placeholder="New York">
+                    </div>
+                </div>
+
+                <div class="search-form-info-relative">
+                    <div class="search-form-label">
+                        <label for="search-form-dates">Check-in &mdash; Check-out</label>
+                    </div>
+                    <div class="search-form-dates">
+                        <input type="text" class="search-input-dates" id="search-form-dates" name="dates" placeholder="Tue 15 Sept &mdash; Sat 19 Sept">
+                    </div>
+                </div>
+
+                <div class="search-form-info">
+                    <div class="search-form-field">
+                        <input type="text" class="search-input-place search-input-persons" id="input_3" name="persons" placeholder="2 Adults &mdash; 0 Children &mdash; 1 Room">
+                    </div>
+                </div>
+
+                <div class="search-form-submit">
+                    <div class="form-submit">
+                        <input type="submit" value="Search" class="search-submit">
+                    </div>
+                </div>
+            </form>
+            <div class="apps-form">
+                <div class="apps-link-form">
+                    <a href="#" class="apps-link">
+                        <img src="images/google-play-logo.svg" alt="Get in on Google Play" class="google-play-logo">
+                    </a>
+                </div>
+                <div class="apps-link-form">
+                    <a href="#" class="apps-link">
+                        <img src="images/app-store-logo.svg" alt="Download on the App Store" class="app-store-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 <div class="offers-block">
     <div class="offers-block-inner">
         <div class="offers-block-header"><h3>What do we offer</h3><hr></div>
@@ -31,32 +104,35 @@
     </div>
 </div>
 <footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-card">
-            <h4>About</h4>
-            <p><a href="/">How Triphouse works</a></p>
-            <p><a href="/">Careers</a></p>
-            <p><a href="/">Privacy</a></p>
-            <p><a href="/">Terms</a></p>
+    <div class="wrapper">
+        <div class="footer-inner">
+            <div class="footer-card">
+                <h4 class="footer-card-item">About</h4>
+                <p class="footer-card-item"><a href="/" class="footer-link">How Triphouse works</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Careers</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Privacy</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Terms</a></p>
+            </div>
+            <div class="footer-card">
+                <h4 class="footer-card-item">Property types</h4>
+                <p class="footer-card-item"><a href="/" class="footer-link">Guest houses</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Hotels</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Apartments</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Villas</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Holiday homes</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">Hostels</a></p>
+            </div>
+            <div class="footer-card">
+                <h4 class="footer-card-item">Support</h4>
+                <p class="footer-card-item"><a href="/" class="footer-link">Contact Customer Service</a></p>
+                <p class="footer-card-item"><a href="/" class="footer-link">FAQ</a></p>
+            </div>
         </div>
-        <div class="footer-card">
-            <h4>Property types</h4>
-            <p><a href="/">Guest houses</a></p>
-            <p><a href="/">Hotels</a></p>
-            <p><a href="/">Apartments</a></p>
-            <p><a href="/">Villas</a></p>
-            <p><a href="/">Holiday homes</a></p>
-            <p><a href="/">Hostels</a></p>
-        </div>
-        <div class="footer-card">
-            <h4>Support</h4>
-            <p><a href="/">Contact Customer Service</a></p>
-            <p><a href="/">FAQ</a></p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="copyright">
-            <p>© 2020 Triphouse, Inc. All rights reserved</p>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2020 Triphouse, Inc. All rights reserved</p>
+            </div>
         </div>
     </div>
 </footer>
