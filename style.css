@@ -247,6 +247,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .col-6{
     width: 50%;
 }
+.col-7{
+    width: calc(var(--col-width) * 7);
+}
+.col-8{
+    width: calc(var(--col-width) * 8);
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: calc(var(--col-width) * 10);
+}
+.col-11{
+    width: calc(var(--col-width) *11);
+}
+.col-12{
+    width: 100%;
+}
 .offers-icon{
     margin:0 auto;
     margin-bottom: 30px;
@@ -256,6 +274,87 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center
 }
 /*Offers block end*/
+
+/*Best destinations block start*/
+.best-destinations{
+    background: #FFFFFF;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    color: #383838;
+}
+.best-destinations-header{
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 40px;
+}
+.best-destinations-cards{
+    position: relative;
+}
+.best-destinations-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.best-destinations-item{
+    padding-right: 16px;
+    margin-bottom: 50px;
+    flex-shrink: 0;
+}
+/*.homes-list-item:last-child{*/
+/*    padding-right: 0;*/
+/*}*/
+.best-destinations-card{
+    display: flex;
+    flex-direction: column;
+}
+.best-destinations-images{
+    height: auto;
+}
+.best-destinations-link-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.best-destinations-heading{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+}
+.best-destinations-title{
+    font-size: 24px;
+    line-height: 28px;
+    color: #3077C6;
+}
+.best-destinations-hide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 390px;
+}
+.best-destinations-hide-btn{
+    transform: rotate(270deg);
+    border-radius: 50%;
+    width: 40px;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.best-destinations-hide-btn:first-child{
+    transform: rotate(90deg);
+    visibility: hidden;
+}
+/*Best destinations block end*/
 
 /*Footer start*/
 .footer{
@@ -323,6 +422,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     .col-md-6{
         width: calc(var(--col-width) * 6);
+    }
+    .col-md-7{
+        width: calc(var(--col-width) * 7);
+    }
+    .col-md-8{
+        width: calc(var(--col-width) * 8);
+    }
+    .col-md-9{
+        width: calc(var(--col-width) * 9);
+    }
+    .col-md-10{
+        width: calc(var(--col-width) * 10);
+    }
+    .col-md-11{
+        width: calc(var(--col-width) * 11);
     }
     .col-md-12{
         width: 100%;
