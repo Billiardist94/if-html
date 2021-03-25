@@ -23,6 +23,9 @@ body, ul, h1, h3, h4, p, input, hr{
     font-style: normal;
     font-weight: normal;
 }
+button, a, label {
+    cursor: pointer;
+}
 .container{
     max-width: 1260px;
     margin: 0 auto;
@@ -111,28 +114,34 @@ body, ul, h1, h3, h4, p, input, hr{
     margin-bottom: 50px;
 
 }
-.label{
-    display: block;
-    color: #FFFFFF;
-    padding-left: 15px;
-    padding-bottom: 25px;
-}
-.labels{
-    display: flex;
-    justify-content: flex-start;
-}
 .inputs{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     border-radius: 8px;
     background-color: #FFFFFF;
-
 }
-
+.label{
+    color: #FFFFFF;
+    position: absolute;
+    left: 25px;
+    top: -30px;
+}
+.label-1{
+    transition: all .25s;
+}
+.label-2,
+.label-3{
+    display: none;
+}
+.loupe-icon {
+    display: none;
+}
+.search-form-group{
+    position: relative;
+}
 .dates{
     display: flex;
-
     border: 3px solid #F5BD41;
     border-radius: 8px;
     max-height: 64px;
@@ -157,9 +166,12 @@ body, ul, h1, h3, h4, p, input, hr{
     line-height: 28px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 }
-.submit-form:active{
+.submit-form:active,
+.submit-form:hover{
     background: #044892;
+    transition: .3s;
 }
 .input-form{
     outline: none;
@@ -368,13 +380,18 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
 }
 .homes-list-images{
-    height: auto;
+    padding-bottom: 100%;
+    position: relative;
 }
 .homes-link-image{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
 }
 .homes-list-heading{
     display: flex;
@@ -408,15 +425,243 @@ input[type="number"]::-webkit-inner-spin-button {
     background: #fff;
     cursor: pointer;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 40px;
+    height: 40px;
 }
 .nav-svg{
     vertical-align: middle;
+    margin: 0 auto;
 }
 .homes-nav-btn:first-child{
     transform: rotate(180deg);
     visibility: hidden;
 }
 /*Homes block end*/
+
+/*Best destinations block start*/
+.best-destinations{
+    background: #FFFFFF;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    color: #383838;
+}
+.best-destinations-header{
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 40px;
+}
+.best-destinations-nav{
+    margin-bottom: 67px;
+}
+.best-destinations-nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    list-style: none;
+    background: #F3F3F4;
+    border-radius: 8px;
+    max-width: 620px;
+    width: 100%;
+}
+.best-destinations-nav-btn{
+    font-size: 24px;
+    line-height: 28px;
+    display:inline-flex;
+    width: 100%;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bd-active-btn{
+    background: #3077C6;
+    border-radius: 8px;
+}
+.bd-active-btn a{
+    color: #FFFFFF;
+}
+.bd-nav-link{
+    text-decoration: none;
+    color: #383838;
+    width: 100%;
+}
+.bd-nav-link:hover{
+    font-size: 1.1em;
+    transition: .3s;
+}
+.best-destinations-cards{
+    position: relative;
+}
+.best-destinations-list{
+    display: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bd-active-list{
+    display: flex;
+}
+.best-destinations-item{
+    padding-right: 16px;
+    margin-bottom: 50px;
+    flex-shrink: 0;
+}
+.best-destinations-card{
+    display: flex;
+    flex-direction: column;
+}
+.best-destinations-images{
+    height: auto;
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
+.book-now{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 37%;
+    visibility: visible;
+    width: 130px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #3077C6;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3077C6;
+    transform: translate(-24px, -24px);
+    display: none;
+}
+.book-now:hover{
+    font-size: 1.2em;
+    transition: .3s;
+}
+.best-destinations-images:hover img{
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: .3s;
+}
+.best-destinations-images:hover .book-now{
+    display: block;
+}
+
+.best-destinations-link-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.best-destinations-heading{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+}
+.best-destinations-title{
+    font-size: 24px;
+    line-height: 28px;
+    color: #3077C6;
+}
+.best-destinations-hide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top:100%;
+    left: 50%;
+}
+.best-destinations-hide-btn{
+    transform: rotate(270deg);
+    border-radius: 50%;
+    width: 40px;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: -4px 0 4px rgba(0, 0, 0, 0.25);
+}
+.best-destinations-hide-btn:first-child{
+    transform: rotate(90deg);
+}
+.best-destinations-hide-btn:last-child{
+    display: none;
+}
+/*Best destinations block end*/
+
+/*Sign up block start*/
+.sign-up{
+    background-color: #EAF0F9;
+    color: #383838;
+}
+.sign-up-inner{
+    position: relative;
+    padding: 50px 25px;
+    display: flex;
+}
+.sign-up-logo{
+    margin-right: 25px;
+}
+.sign-up-logo-trip{
+    display: none;
+}
+.sign-up-content{
+    display: block;
+}
+.sign-up-info{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.sign-up-info span{
+    display: none;
+}
+.sign-up-btn{
+    padding: 12px 32px;
+    background: #FFFFFF;
+    border: 1px solid #3077C6;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #3077C6;
+    text-decoration: none;
+}
+.sign-up-btn:hover{
+    font-size: 1.2em;
+    transition: .3s;
+}
+.sign-up-install-btn{
+    display: none;
+}
+.sign-up-close{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    height: 26px;
+    width: 26px;
+    border: 0;
+    outline: 0;
+    background: 0;
+    padding: 0;
+}
+.sign-up-close:hover{
+    color: #383838;
+}
+.sign-up-install{
+    display: none;
+}
+/*Sign up block end*/
 
 /*Footer start*/
 .footer{
@@ -447,6 +692,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-link:hover, .footer-link:active, .footer-link:focus{
     color: #F5BD41;
     text-decoration: underline;
+    transition: .5s;
 }
 .copyright{
     font-size: 14px;
@@ -463,6 +709,30 @@ input[type="number"]::-webkit-inner-spin-button {
 @media (max-width: 1023px) {
     .container{
         max-width: 768px;
+    }
+    .intro{
+        padding-top: 150px;
+    }
+    .intro-title {
+        margin-bottom: 50px;
+    }
+    .label{
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        left: 24px;
+        top: 5px;
+        color: #383838;
+    }
+    .label-2,
+    .label-3{
+        display: inline-block;
+    }
+    .label-3{
+        left: calc(50% + 24px);
+    }
+    .check-label-desktop{
+        display: none;
     }
     :root{
         --col-width: 8.33%;
@@ -574,22 +844,45 @@ input[type="number"]::-webkit-inner-spin-button {
     .input-form{
         border: 4px solid #F5BD41;
         border-radius: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
     }
     .destination-form{
         position: relative;
         padding-left: 40px;
     }
+    .label{
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        left: 12px;
+        top: 5px;
+        color: #383838;
+    }
     .label-1{
+        left: 43px;
+    }
+    .destination-loupe-icon {
+        display: inline-block;
         position: absolute;
-        font-size: 0;
-        background-image: url("images/vector.svg");
-        background-repeat: no-repeat;
-        top: 228px;
-        left: 35px;
-        z-index: 1;
+        width: 16px;
+        height: 16px;
+        color: #BFBFBF;
+        top: 25px;
+        left: 20px;
+        z-index: 3;
     }
     .label-2,
     .label-3{
+        display: inline-block;
+    }
+    .label-3{
+        left: calc(50% + 12px);
+    }
+    .check-label-desktop{
         display: none;
     }
     .persons-label{
@@ -603,6 +896,7 @@ input[type="number"]::-webkit-inner-spin-button {
         justify-content: center;
 
     }
+
     :root{
         --col-width: 16.66%;
     }
@@ -656,6 +950,7 @@ input[type="number"]::-webkit-inner-spin-button {
     hr{
         display: none;
     }
+
     .homes-guests-loves {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -687,17 +982,145 @@ input[type="number"]::-webkit-inner-spin-button {
         position: absolute;
         left: -15px;
         right: 2px;
-        top: 13%;
+        top: 26%;
     }
     .homes-nav-btn{
         width: 28px;
         height: 28px;
-        transform: translateY(100%);
     }
     .nav-svg{
         max-width: 100%;
         max-height: 100%;
     }
+
+    .best-destinations{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .best-destinations-header{
+        margin-bottom: 30px;
+    }
+    .best-destinations-header h3{
+        font-size: 28px;
+        line-height: 33px;
+    }
+    .best-destinations-nav{
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+    .best-destinations-nav-list{
+        background: transparent;
+    }
+    .best-destinations-nav-btn{
+        font-size: 19px;
+        line-height: 22px;
+        height: 32px;
+        white-space: nowrap;
+        width: 30%;
+        border: 1px solid #F3F3F4;
+        border-radius: 4px;
+    }
+    .hidden-text{
+        display: none;
+    }
+    .book-now{
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 18px;
+        top: 57%;
+        left: 39%;
+    }
+    .book-now:hover{
+        font-size: 14px;
+    }
+    .best-destinations-title {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .best-destinations-hide {
+        flex-direction: row;
+        left: -15px;
+        right: 2px;
+        top: 26%;
+    }
+    .best-destinations-hide-btn{
+        width: 28px;
+        height: 28px;
+    }
+    .best-destinations-hide-btn:first-child {
+        transform: rotate(180deg);
+        visibility: hidden;
+    }
+    .best-destinations-hide-btn:last-child {
+        display: block;
+        transform: rotate(0deg);
+    }
+    .best-destinations-item{
+        margin-bottom: 0;
+    }
+
+    .sign-up-inner{
+        padding: 24px 0;
+    }
+    .sign-up-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .sign-up-logo,
+    .sign-up-btn{
+        display: none;
+    }
+    .sign-up-install-btn,
+    .sign-up-logo-trip{
+        display: inline-block;
+    }
+    .sign-up-trip-wrap{
+        width: 58px;
+        height: 58px;
+        margin: 0 15px;
+        order: 2;
+    }
+    .sign-up-install-btn{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #3077C6;
+        border: 0;
+        outline: 0;
+        background: 0;
+        padding: 0;
+        order: 2;
+    }
+    .sign-up-install-btn:hover{
+        font-size: 1.2em;
+        transition: .3s;
+    }
+    .sign-up-close{
+        position: static;
+        order: 1;
+        width: 16px;
+        height: 16px;
+    }
+    .sign-up-close svg{
+        width: 16px;
+        height: 16px;
+    }
+    .sign-up-info{
+        min-width: 170px;
+        text-align: start;
+        font-size: 12px;
+        line-height: 14px;
+        order: 2;
+        padding: 0 15px 0 0;
+    }
+    .sign-up-info span{
+        display: inline-block;
+    }
+
     .footer-logo{
         display: flex;
         justify-content: center;
@@ -714,6 +1137,10 @@ input[type="number"]::-webkit-inner-spin-button {
     }
     .footer-card-item{
         margin:0 auto;
+    }
+    .footer-card-item:hover{
+        font-size: 1.2em;
+        cursor: pointer;
     }
     .footer-inner{
         margin: 0 auto;
