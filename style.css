@@ -10,13 +10,27 @@
     font-weight: 500;
     src: url('fonts/roboto-v20-latin-500.woff') format('woff');
 }
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/open-sans-v18-latin-regular.woff') format('woff');
+}
+/* open-sans-600 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/open-sans-v18-latin-600.woff') format('woff');
+}
 html {
     box-sizing: border-box;
 }
 *, *::before, *::after {
     box-sizing: inherit;
 }
-body, ul, h1, h3, h4, p, input, hr{
+body, ul, h1, h3, h4, h5, p, input, hr{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -523,9 +537,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .book-now{
     position: absolute;
     text-align: center;
-    top: 50%;
-    left: 37%;
-    visibility: visible;
+    top: 40%;
+    left: 0;
+    right: 0;
     width: 130px;
     height: 50px;
     background: #FFFFFF;
@@ -534,8 +548,8 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 18px;
     line-height: 21px;
     color: #3077C6;
-    transform: translate(-24px, -24px);
-    display: none;
+    margin: 0 auto;
+    visibility: hidden;
 }
 .book-now:hover{
     font-size: 1.2em;
@@ -547,7 +561,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transition: .3s;
 }
 .best-destinations-images:hover .book-now{
-    display: block;
+    visibility: visible;
 }
 
 .best-destinations-link-image{
@@ -597,10 +611,18 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 /*Best destinations block end*/
 
+/*sign-up-guests-reviews block start*/
+.sign-up-guests-reviews{
+    display: flex;
+    flex-direction: column;
+}
+/*sign-up-guests-reviews block end*/
+
 /*Sign up block start*/
 .sign-up{
     background-color: #EAF0F9;
     color: #383838;
+    order: 1;
 }
 .sign-up-inner{
     position: relative;
@@ -662,6 +684,173 @@ input[type="number"]::-webkit-inner-spin-button {
     display: none;
 }
 /*Sign up block end*/
+
+/*Guests reviews block start*/
+.guests-reviews{
+    padding: 120px 0px;
+    order: 2;
+}
+.guests-reviews-header{
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 40px;
+}
+.guests-reviews-cards{
+    position: relative;
+}
+.guests-reviews-list{
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+.guests-reviews-item{
+    background-color: #EAF0F9;
+    max-height: 100%;
+    margin-right: 16px;
+    flex-shrink: 0;
+    max-width: 400px;
+}
+.guests-reviews-item:last-child{
+    margin-right: 0;
+}
+.gr-list-card{
+    display: flex;
+    flex-direction: column;
+}
+.gr-card-images{
+    padding-bottom: 100%;
+    position: relative;
+}
+.gr-card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gr-card-price{
+    position: absolute;
+    height: 48px;
+    width: 100%;
+    background-color: rgba(56, 56, 56, 0.7);
+    bottom: 0;
+    display: initial;
+}
+.gr-card-price-link{
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 24px;
+    font-weight: normal
+}
+.gr-card-price-link:hover{
+    font-size: 1.2em;
+    transition: .3s;
+}
+.gr-card-price span{
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+.gr-card-content{
+    padding: 24px;
+}
+.gr-card-middle{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+}
+.gr-card-header{
+
+}
+.gr-card-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3077C6;
+    padding-bottom: 16px;
+}
+.gr-card-title-link{
+    text-decoration: none;
+}
+.gr-card-title-link:hover{
+    text-decoration: #3077C6 underline;
+}
+.gr-card-subtitle{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3077C6;
+}
+.gr-card-score{
+    text-align: right;
+}
+.gr-card-point span{
+    background: #10367C;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 4px 11px;
+}
+.gr-card-reviews{
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #BFBFBF;
+}
+.gr-card-user{
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+}
+.gr-card-usericon{
+    padding: 0 20px 0 5px;
+}
+.gr-card-username{
+    font-size: 18px;
+    line-height: 21px;
+    color: #383838;
+    padding-bottom: 8px;
+}
+.gr-card-nationality{
+    font-size: 18px;
+    line-height: 21px;
+    color: #BFBFBF;
+}
+.gr-card-nationality-flag{
+    width: 20px;
+    height: 15px;
+}
+.gr-card-comments{
+    font-size: 18px;
+    line-height: 21px;
+    color: #383838;
+}
+.gr-card-slider{
+    display: none;
+}
+.gr-block-nav{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: 25%;
+}
+
+/*Guests reviews block end*/
 
 /*Footer start*/
 .footer{
@@ -1028,8 +1217,6 @@ input[type="number"]::-webkit-inner-spin-button {
         height: 30px;
         font-size: 14px;
         line-height: 18px;
-        top: 57%;
-        left: 39%;
     }
     .book-now:hover{
         font-size: 14px;
@@ -1060,6 +1247,10 @@ input[type="number"]::-webkit-inner-spin-button {
         margin-bottom: 0;
     }
 
+    .sign-up{
+        order: 2;
+        background-color: #FFFFFF;
+    }
     .sign-up-inner{
         padding: 24px 0;
     }
@@ -1119,6 +1310,54 @@ input[type="number"]::-webkit-inner-spin-button {
     }
     .sign-up-info span{
         display: inline-block;
+    }
+
+    .guests-reviews{
+        padding: 40px 0px;
+        background-color: #EAF0F9;
+        order: 1;
+    }
+    .guests-reviews-header{
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+    .guests-reviews-header:first-letter{
+        text-transform: uppercase;
+    }
+    .guests-reviews-header span{
+        display: none;
+    }
+    .gr-card-price{
+        display: none;
+    }
+    .gr-list-card{
+        padding: 0;
+    }
+    .gr-card-content{
+        padding: 12px 0;
+    }
+    .gr-card-slider{
+        display: block;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .gr-card-slide{
+        display: inline-block;
+        cursor: pointer;
+        margin: 0 4px;
+    }
+    .gr-card-slide-item{
+        background: transparent;
+        display: block;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #333333;
+        border-radius: 50%;
+        outline: none;
+    }
+    .gr-card-slider a.active{
+        background-color: #383838;
     }
 
     .footer-logo{
