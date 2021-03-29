@@ -74,7 +74,7 @@ button, a, label {
 .header-point:hover:after{
     --line-width: 50px;
     display: block;
-    content: '';
+    content: ' ';
     width: var(--line-width);
     height: 4px;
     background-color: #F5BD41;
@@ -90,17 +90,38 @@ button, a, label {
 }
 .header-item{
     margin-right: 24px;
+    cursor: pointer;
+}
+.header-item-txt{
+    margin-right: 24px;
+    cursor: pointer;
+    position: relative;
 }
 .header-icons .header-item:last-child{
     margin-right: 0;
 }
-.header-item:nth-child(2){
+.header-item-txt:nth-child(2){
     margin-right: 48px;
 }
-.header-point{
-    color: #FFFFFF;
+.header-item-txt:after{
+    content: "";
+    height: 4px;
+    width: calc(100% - 10px);
+    background-color: #F5BD41;
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    opacity: 0;
+}
+.header-item-txt:hover:after{
+    opacity: 1;
+}
+.header-list span{
     font-size: 24px;
     line-height: 28px;
+    color: #FFFFFF;
 }
 /*Header block end*/
 
@@ -288,6 +309,30 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /*Intro block end*/
 
+/*Columns layout start*/
+:root{
+    --col-width: 8.33%;
+}
+.col-1{
+    width: var(--col-width);
+}
+.col-2{
+    width: calc(var(--col-width) * 2);
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: calc(var(--col-width) * 4);
+}
+.col-5{
+    width: calc(var(--col-width) * 5);
+}
+.col-6{
+    width: 50%;
+}
+/*Columns layout end*/
+
 /*Offers block start*/
 .offers-block{
     margin-top: 120px;
@@ -326,27 +371,6 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-}
-:root{
-    --col-width: 8.33%;
-}
-.col-1{
-    width: var(--col-width);
-}
-.col-2{
-    width: calc(var(--col-width) * 2);
-}
-.col-3{
-    width: 25%;
-}
-.col-4{
-    width: calc(var(--col-width) * 4);
-}
-.col-5{
-    width: calc(var(--col-width) * 5);
-}
-.col-6{
-    width: 50%;
 }
 .offers-icon{
     margin:0 auto;
@@ -442,6 +466,10 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 40px;
     height: 40px;
 }
+.homes-nav-btn:hover{
+    transform: scale(1.15);
+    transition: .3s;
+}
 .nav-svg{
     vertical-align: middle;
     margin: 0 auto;
@@ -465,43 +493,32 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 40px;
 }
 .best-destinations-nav{
-    margin-bottom: 67px;
-}
-.best-destinations-nav-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    list-style: none;
-    background: #F3F3F4;
-    border-radius: 8px;
+    margin-bottom: 65px;
     max-width: 620px;
-    width: 100%;
+    height: 64px;
+    background-color: #F3F3F4;;
+    display: flex;
+    border-radius: 8px;
 }
 .best-destinations-nav-btn{
+    float: left;
+    border: 0;
+    outline: 0;
+    height: 100%;
+    flex-grow: 1;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
     font-size: 24px;
     line-height: 28px;
-    display:inline-flex;
-    width: 100%;
-    height: 64px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-}
-.bd-active-btn{
-    background: #3077C6;
-    border-radius: 8px;
-}
-.bd-active-btn a{
-    color: #FFFFFF;
-}
-.bd-nav-link{
-    text-decoration: none;
     color: #383838;
-    width: 100%;
 }
-.bd-nav-link:hover{
-    font-size: 1.1em;
-    transition: .3s;
+.best-destinations-nav-btn:hover,
+.best-destinations-nav-btn:focus{
+    background: #3077C6;
+    color: #FFFFFF;
+    transition: .5s;
 }
 .best-destinations-cards{
     position: relative;
@@ -563,7 +580,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .best-destinations-images:hover .book-now{
     visibility: visible;
 }
-
 .best-destinations-link-image{
     width: 100%;
     height: 100%;
@@ -593,7 +609,7 @@ input[type="number"]::-webkit-inner-spin-button {
     left: 50%;
 }
 .best-destinations-hide-btn{
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     border-radius: 50%;
     width: 40px;
     border: 0;
@@ -601,12 +617,15 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 0;
     background: #fff;
     cursor: pointer;
+    box-shadow: 4px 0 4px rgba(0, 0, 0, 0.25);
+}
+.best-destinations-hide-btn:hover,
+.best-destinations-hide-btn:active{
+    transform: scale(1.2) rotate(270deg);
     box-shadow: -4px 0 4px rgba(0, 0, 0, 0.25);
+    transition: .3s;
 }
-.best-destinations-hide-btn:first-child{
-    transform: rotate(90deg);
-}
-.best-destinations-hide-btn:last-child{
+.best-destinations-block-nav{
     display: none;
 }
 /*Best destinations block end*/
@@ -674,11 +693,14 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 26px;
     border: 0;
     outline: 0;
-    background: 0;
+    background: transparent;
     padding: 0;
+    opacity: 0.9;
 }
 .sign-up-close:hover{
-    color: #383838;
+    transform: scale(1.1);
+    transition: .3s;
+    opacity: 1;
 }
 .sign-up-install{
     display: none;
@@ -708,18 +730,16 @@ input[type="number"]::-webkit-inner-spin-button {
 
 }
 .guests-reviews-item{
-    background-color: #EAF0F9;
     max-height: 100%;
-    margin-right: 16px;
+    padding-right: 16px;
     flex-shrink: 0;
-    max-width: 400px;
-}
-.guests-reviews-item:last-child{
-    margin-right: 0;
+    max-width: 100%;
 }
 .gr-list-card{
     display: flex;
     flex-direction: column;
+    background-color: #EAF0F9;
+    height: 100%;
 }
 .gr-card-images{
     padding-bottom: 100%;
@@ -846,10 +866,9 @@ input[type="number"]::-webkit-inner-spin-button {
     justify-content: space-between;
     position: absolute;
     left: -20px;
-    right: -20px;
+    right: 0px;
     top: 25%;
 }
-
 /*Guests reviews block end*/
 
 /*Footer start*/
@@ -895,7 +914,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /*Footer end*/
 
 /*Media queries start*/
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1023px) {
     .container{
         max-width: 768px;
     }
@@ -944,6 +963,21 @@ input[type="number"]::-webkit-inner-spin-button {
     .col-md-6{
         width: calc(var(--col-width) * 6);
     }
+    .col-md-7{
+        width: calc(var(--col-width) * 7);
+    }
+    .col-md-8{
+        width: calc(var(--col-width) * 8);
+    }
+    .col-md-9{
+        width: calc(var(--col-width) * 9);
+    }
+    .col-md-10{
+        width: calc(var(--col-width) * 10);
+    }
+    .col-md-11{
+        width: calc(var(--col-width) * 11);
+    }
     .col-md-12{
         width: 100%;
     }
@@ -958,7 +992,7 @@ input[type="number"]::-webkit-inner-spin-button {
         padding-bottom: 16px;
     }
 }
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .container{
         max-width: none;
     }
@@ -1195,19 +1229,18 @@ input[type="number"]::-webkit-inner-spin-button {
     }
     .best-destinations-nav{
         margin-bottom: 25px;
-        overflow: hidden;
-    }
-    .best-destinations-nav-list{
-        background: transparent;
+        background-color: transparent;
+        height: 32px;
     }
     .best-destinations-nav-btn{
         font-size: 19px;
         line-height: 22px;
-        height: 32px;
+        height: 100%;
         white-space: nowrap;
-        width: 30%;
         border: 1px solid #F3F3F4;
         border-radius: 4px;
+        width: 100px;
+        margin-right: 16px;
     }
     .hidden-text{
         display: none;
@@ -1246,6 +1279,14 @@ input[type="number"]::-webkit-inner-spin-button {
     .best-destinations-item{
         margin-bottom: 0;
     }
+    .best-destinations-block-nav{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: -15px;
+        right: 2px;
+        top: 33%;
+    }
 
     .sign-up{
         order: 2;
@@ -1259,7 +1300,7 @@ input[type="number"]::-webkit-inner-spin-button {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        margin: 0 auto;
     }
     .sign-up-logo,
     .sign-up-btn{
@@ -1283,11 +1324,10 @@ input[type="number"]::-webkit-inner-spin-button {
         border: 0;
         outline: 0;
         background: 0;
-        padding: 0;
         order: 2;
     }
     .sign-up-install-btn:hover{
-        font-size: 1.2em;
+        font-size: 1.1em;
         transition: .3s;
     }
     .sign-up-close{
@@ -1301,12 +1341,11 @@ input[type="number"]::-webkit-inner-spin-button {
         height: 16px;
     }
     .sign-up-info{
-        min-width: 170px;
         text-align: start;
         font-size: 12px;
         line-height: 14px;
         order: 2;
-        padding: 0 15px 0 0;
+        padding: 0;
     }
     .sign-up-info span{
         display: inline-block;
@@ -1347,6 +1386,10 @@ input[type="number"]::-webkit-inner-spin-button {
         cursor: pointer;
         margin: 0 4px;
     }
+    .gr-card-slide:hover{
+        transform: scale(1.2);
+        transition: .3s;
+    }
     .gr-card-slide-item{
         background: transparent;
         display: block;
@@ -1358,6 +1401,9 @@ input[type="number"]::-webkit-inner-spin-button {
     }
     .gr-card-slider a.active{
         background-color: #383838;
+    }
+    .gr-block-nav{
+        display: none;
     }
 
     .footer-logo{
@@ -1380,6 +1426,7 @@ input[type="number"]::-webkit-inner-spin-button {
     .footer-card-item:hover{
         font-size: 1.2em;
         cursor: pointer;
+        transition: .5s;
     }
     .footer-inner{
         margin: 0 auto;
@@ -1393,6 +1440,11 @@ input[type="number"]::-webkit-inner-spin-button {
     .copyright{
         font-size: 12px;
         line-height: 14px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .guests-reviews-item{
+        width: 100%;
     }
 }
 /*Media queries end*/
