@@ -838,6 +838,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .gr-card-usericon{
     padding: 0 20px 0 5px;
 }
+.gr-card-usericon svg{
+    width: 54px;
+    height: 54px;
+}
 .gr-card-username{
     font-size: 18px;
     line-height: 21px;
@@ -1373,8 +1377,31 @@ input[type="number"]::-webkit-inner-spin-button {
     .gr-list-card{
         padding: 0;
     }
+    .gr-card-title{
+        padding-bottom: 8px;
+    }
+    .gr-card-middle{
+        padding-bottom: 16px;
+    }
     .gr-card-content{
         padding: 12px 0;
+    }
+    .gr-card-content p,
+    .gr-card-content h5,
+    .gr-card-content span{
+        font-size: 15px;
+        line-height: 18px;
+    }
+     p.gr-card-reviews{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .gr-card-usericon svg{
+        width: 44px;
+        height: 44px;
+    }
+    .gr-card-username{
+        padding-bottom: 4px;
     }
     .gr-card-slider{
         display: block;
