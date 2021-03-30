@@ -23,11 +23,16 @@ body, ul, h1, h3, h4, p, input, hr{
     font-style: normal;
     font-weight: normal;
 }
+.wrapper{
+    max-width: 1230px;
+    margin: 0 auto;
+}
 .container{
     max-width: 1260px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 
 /*Header block start*/
 .header {
@@ -51,19 +56,16 @@ body, ul, h1, h3, h4, p, input, hr{
 .header-list{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
     list-style: none;
+    padding-top: 20px;
 }
-.header-point:hover:after{
-    --line-width: 50px;
-    display: block;
-    content: '';
-    width: var(--line-width);
+.line{
+    width: 50px;
+    border: none;
     height: 4px;
-    background-color: #F5BD41;
-    position: relative;
-    top: 12px;
-    left: calc(50% - var(--line-width) / 2);
+    background: #F5BD41;
+    margin: 12px auto;
 }
 .header-icons{
     display: flex;
@@ -109,9 +111,8 @@ body, ul, h1, h3, h4, p, input, hr{
     flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 50px;
-
 }
-.label{
+label{
     display: block;
     color: #FFFFFF;
     padding-left: 15px;
@@ -119,7 +120,9 @@ body, ul, h1, h3, h4, p, input, hr{
 }
 .labels{
     display: flex;
-    justify-content: flex-start;
+}
+.labels label:first-child{
+    margin-right: 140px;
 }
 .inputs{
     display: flex;
@@ -127,12 +130,13 @@ body, ul, h1, h3, h4, p, input, hr{
     align-items: flex-end;
     border-radius: 8px;
     background-color: #FFFFFF;
-
 }
-
+.destination{
+    flex-grow: 0.38;
+}
 .dates{
     display: flex;
-
+    flex-grow: 0.2;
     border: 3px solid #F5BD41;
     border-radius: 8px;
     max-height: 64px;
@@ -141,14 +145,10 @@ body, ul, h1, h3, h4, p, input, hr{
     max-height: 58px;
 }
 .persons{
-    display: flex;
-    height: 64px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    flex-grow: 0.26;
 }
-.persons-label{
-    cursor: pointer;
+.submit{
+    flex-grow: 0.2;
 }
 .submit-form{
     background: #3077C6;
@@ -158,8 +158,9 @@ body, ul, h1, h3, h4, p, input, hr{
     text-align: center;
     color: #FFFFFF;
 }
-.submit-form:active{
-    background: #044892;
+.inputs input{
+    padding-left: 24px;
+    padding-right: 24px;
 }
 .input-form{
     outline: none;
@@ -167,90 +168,15 @@ body, ul, h1, h3, h4, p, input, hr{
     height: 64px;
     width: 100%;
     border-radius: 8px;
-    padding-left: 24px;
-    padding-right: 24px;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
-}
-.block{
-    margin-top: 20px;
-    position: absolute;
-    width: 260px;
-    background: #fff;
-    border-radius: 8px;
-    top: 50px;
-}
-#checkbox{
-    display: none;
-}
-#checkbox:checked ~ .block{
-    display: none;
-}
-.box{
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-}
-.input{
-    width: 1em;
-    outline: none;
-    border: none;
-}
-.item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.choose{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100px;
-}
-.btn{
-    width: 30px;
-    height: 30px;
-    margin-right: 0;
-    min-width: auto;
-    background-color: #fff;
-    color: #0071c2;
-    border-color: #0071c2;
-    cursor: pointer;
-}
-.disabled-btn{
-    color: #b3b3b3;
-    cursor: not-allowed;
-    border-color: #b3b3b3;
-}
-.child-age{
-    display: block;
-    margin-top: 20px
-}
-.child-age-span,
-.select-child-age{
-    font-size: 12px;
-    line-height: 14px;
-}
-.select-child-age{
-    outline: none;
-    background: #FFFFFF;
-    border: 1px solid #3077C6;
-    box-sizing: border-box;
-    width: 100px;
-    height: 30px;
 }
 
 .apps-form{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 50px;
+    margin: 0 auto;
     justify-content: center;
 }
 .apps-link-form{
@@ -271,152 +197,47 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .offers-block-header {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     font-size: 40px;
-}
-.h3-text{
     font-weight: 500;
-}
-.offers-block-header:after{
-    --line-width: 50px;
-    display: block;
-    content: '';
-    width: calc(var(--line-width) * 2);
-    height: 4px;
-    background-color: #F5BD41;
-    position: relative;
-    top: 20px;
-    left: calc(50% - calc(var(--line-width) *2 ) / 2);
 }
 .offers-cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 0 auto;
     align-items: baseline;
     font-size: 24px;
     font-weight: 400;
+    max-width: 1240px;
 }
 .offers-item{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-}
-:root{
-    --col-width: 8.33%;
-}
-.col-1{
-    width: var(--col-width);
-}
-.col-2{
-    width: calc(var(--col-width) * 2);
-}
-.col-3{
-    width: 25%;
-}
-.col-4{
-    width: calc(var(--col-width) * 4);
-}
-.col-5{
-    width: calc(var(--col-width) * 5);
-}
-.col-6{
-    width: 50%;
+    min-width: 295px;
+
 }
 .offers-icon{
     margin:0 auto;
     margin-bottom: 30px;
+
 }
 .offers-text{
-    margin: 0 auto;
+    margin: auto;
     text-align: center
 }
+.offers-block-header h3{
+    margin: 0;
+    font-weight: 500;
+}
+hr{
+    margin: 20px auto;
+    width: 100px;
+    border: none;
+    height: 4px;
+    background: #F5BD41;
+}
 /*Offers block end*/
-
-/*Homes block start*/
-.homes-guests-loves{
-    background: #EAF0F9;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    color: #383838;
-}
-.homes-block-header{
-    text-align: center;
-    margin-bottom: 100px;
-    font-size: 40px;
-}
-.homes-block-cards{
-    position: relative;
-}
-.homes-list{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    list-style: none;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-.homes-list-item{
-    padding-right: 16px;
-    flex-shrink: 0;
-}
-/*.homes-list-item:last-child{*/
-/*    padding-right: 0;*/
-/*}*/
-.homes-list-card{
-    display: flex;
-    flex-direction: column;
-}
-.homes-list-images{
-    height: auto;
-}
-.homes-link-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.homes-list-heading{
-    display: flex;
-    flex-direction: column;
-    padding-top: 16px;
-}
-.homes-list-title{
-    font-size: 24px;
-    line-height: 28px;
-    color: #3077C6;
-}
-.homes-list-subtitle{
-    font-size: 24px;
-    line-height: 28px;
-    color: #BFBFBF;
-    padding-top: 16px;
-}
-.homes-block-nav{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    left: -20px;
-    right: -5px;
-    top: 30%;
-}
-.homes-nav-btn{
-    border-radius: 50%;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    background: #fff;
-    cursor: pointer;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-.nav-svg{
-    vertical-align: middle;
-}
-.homes-nav-btn:first-child{
-    transform: rotate(180deg);
-    visibility: hidden;
-}
-/*Homes block end*/
 
 /*Footer start*/
 .footer{
@@ -431,8 +252,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-inner{
     display: flex;
     justify-content: space-between;
-    padding-top: 120px;
-    padding-bottom: 65px;
+    padding: 120px 200px 65px 0;
 }
 .footer-card h4{
     font-weight: 500;
@@ -460,45 +280,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /*Footer end*/
 
 /*Media queries start*/
-@media (max-width: 1023px) {
-    .container{
-        max-width: 768px;
-    }
-    :root{
-        --col-width: 8.33%;
-    }
-    .col-md-1{
-        width: var(--col-width);
-    }
-    .col-md-2{
-        width: calc(var(--col-width) * 2);
-    }
-    .col-md-3{
-        width: calc(var(--col-width) * 3);
-    }
-    .col-md-4{
-        width: calc(var(--col-width) * 4);
-    }
-    .col-md-5{
-        width: calc(var(--col-width) * 5);
-    }
-    .col-md-6{
-        width: calc(var(--col-width) * 6);
-    }
-    .col-md-12{
-        width: 100%;
-    }
-    .offers-block {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    .offers-item{
-        margin-bottom: 40px;
-    }
-    .homes-list-item {
-        padding-bottom: 16px;
-    }
-}
+
 @media (max-width: 767px) {
     .container{
         max-width: none;
@@ -516,6 +298,8 @@ input[type="number"]::-webkit-inner-spin-button {
         margin-right: 16px;
         width: auto;
     }
+
+
     .header-menu{
         display: flex;
         align-items: center;
@@ -555,12 +339,14 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .intro{
         padding-top: 90px;
-        min-height: 80vh;
     }
     .intro-title{
         font-size: 30px;
         line-height: 35px;
         margin-bottom: 40px;
+    }
+    .labels{
+        display: none;
     }
     .inputs{
         display: inline-block;
@@ -574,55 +360,6 @@ input[type="number"]::-webkit-inner-spin-button {
     .input-form{
         border: 4px solid #F5BD41;
         border-radius: 8px;
-    }
-    .destination-form{
-        position: relative;
-        padding-left: 40px;
-    }
-    .label-1{
-        position: absolute;
-        font-size: 0;
-        background-image: url("images/vector.svg");
-        background-repeat: no-repeat;
-        top: 228px;
-        left: 35px;
-        z-index: 1;
-    }
-    .label-2,
-    .label-3{
-        display: none;
-    }
-    .persons-label{
-        background-color: #fff;
-        border: 4px solid #F5BD41;
-        border-radius: 8px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-    :root{
-        --col-width: 16.66%;
-    }
-    .col-sm-1{
-        width: var(--col-width);
-    }
-    .col-sm-2{
-        width: calc(var(--col-width) * 2);
-    }
-    .col-sm-3{
-        width: 50%;
-    }
-    .col-sm-4{
-        width: calc(var(--col-width) * 4);
-    }
-    .col-sm-5{
-        width: calc(var(--col-width) * 5);
-    }
-    .col-sm-6{
-        width: 100%;
     }
     .offers-cards{
         font-size: 15px;
@@ -644,59 +381,13 @@ input[type="number"]::-webkit-inner-spin-button {
         line-height: 33px;
     }
     .offers-block-header, .offers-item{
-        margin-bottom: 32px;
-    }
-    .offers-block-header:after {
-        display: none;
-
+        margin-bottom: 40px;
     }
     .offers-item:last-child{
         margin-bottom: 0;
     }
     hr{
         display: none;
-    }
-    .homes-guests-loves {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    .homes-list-item {
-        padding-bottom: 16px;
-    }
-    .homes-block-header h3{
-        font-size: 28px;
-        line-height: 33px;
-    }
-    .homes-block-header {
-        margin-bottom: 32px;
-    }
-    .homes-list-heading {
-        padding-top: 8px;
-    }
-    .homes-list-title,
-    .homes-list-subtitle{
-        font-size: 12px;
-        line-height: 14px;
-    }
-    .homes-list-subtitle{
-        padding-top: 4px;
-    }
-    .homes-block-nav {
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        left: -15px;
-        right: 2px;
-        top: 13%;
-    }
-    .homes-nav-btn{
-        width: 28px;
-        height: 28px;
-        transform: translateY(100%);
-    }
-    .nav-svg{
-        max-width: 100%;
-        max-height: 100%;
     }
     .footer-logo{
         display: flex;
@@ -710,15 +401,12 @@ input[type="number"]::-webkit-inner-spin-button {
         font-size: 15px;
         line-height: 18px;
         text-decoration-line: underline;
-        text-align: center;
     }
     .footer-card-item{
         margin:0 auto;
     }
     .footer-inner{
-        margin: 0 auto;
-        padding-top: 40px;
-        padding-bottom: 32px;
+        padding: 40px 50px 32px 50px;
     }
     .footer-bottom{
         justify-content: center;
