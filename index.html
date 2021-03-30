@@ -20,9 +20,8 @@
             </div>
             <nav class="header-nav">
                 <ul class="header-list">
-                    <li class="header-item"><p class="header-point">Stays</p>
-                    </li>
-                    <li class="header-item"><p class="header-point">Attractions</p></li>
+                    <li class="header-item-txt"><span>Stays</span></li>
+                    <li class="header-item-txt"><span>Attractions</span></li>
                 </ul>
                 <ul class="header-icons">
                     <li class="header-item">
@@ -37,9 +36,16 @@
                     </li>
                 </ul>
                 <div class="header-menu">
-                    <a href="#" class="header-menu-button">
-                        <span></span>
-                    </a>
+                    <a href="#nav" class="header-menu-button"><span></span></a>
+                    <div id="nav" class="header-menu-burger">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 1000 1000">
+                                <path d="M587.4 500l396.2-396.2c8.5-8.5 8.5-22.4 0-30.9l-56.5-56.5c-4.1-4.1-9.7-6.4-15.5-6.4s-11.4 2.3-15.5 6.4L500 412.6 103.8 16.4c-8.2-8.2-22.7-8.2-30.9 0L16.4 72.9c-8.5 8.5-8.5 22.4 0 30.9L412.6 500 16.4 896.2c-8.5 8.5-8.5 22.4 0 30.9l56.5 56.5c4.1 4.1 9.7 6.4 15.5 6.4 5.8 0 11.4-2.3 15.5-6.4L500 587.4l396.2 396.2c4.1 4.1 9.7 6.4 15.5 6.4 5.8 0 11.4-2.3 15.5-6.4l56.5-56.5c8.5-8.5 8.5-22.4 0-30.9L587.4 500z"/>
+                            </svg>
+                        </a>
+                        <a href="#">Stays</a>
+                        <a href="#">Attractions</a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -287,11 +293,9 @@
             <h3 class="h3-text">The best destinations</h3>
         </div>
         <div class="best-destinations-nav">
-            <ul class="best-destinations-nav-list">
-                <li class="best-destinations-nav-btn bd-active-btn"><a href="#" class="bd-nav-link">Regions</a></li>
-                <li class="best-destinations-nav-btn"><a href="#" class="bd-nav-link">Cities</a></li>
-                <li class="best-destinations-nav-btn"><a href="#" class="bd-nav-link">Places<span class="hidden-text"> of interest</span></a></li>
-            </ul>
+            <button type="button" class="best-destinations-nav-btn">Regions</button>
+            <button type="button" class="best-destinations-nav-btn">Cities</button>
+            <button type="button" class="best-destinations-nav-btn bd-active-btn">Places<span class="hidden-text">&nbsp;of interest</span></button>
         </div>
         <div class="best-destinations-cards">
             <ul class="best-destinations-list bd-active-list">
@@ -358,7 +362,7 @@
                 <li class="best-destinations-item col-3 col-md-6 col-sm-3">
                     <div class="best-destinations-card">
                         <div class="best-destinations-images">
-                            <img src="images/japan.jpg" alt="Japan" class="best-destinations-link-image">
+                            <img src="images/berlin-germany.jpg" alt="Japan" class="best-destinations-link-image">
                             <button class="book-now">
                                 <span class="book-now-content">Book now</span>
                             </button>
@@ -373,7 +377,7 @@
                 <li class="best-destinations-item col-3 col-md-6 col-sm-3">
                     <div class="best-destinations-card">
                         <div class="best-destinations-images">
-                            <img src="images/france.jpg" alt="France" class="best-destinations-link-image">
+                            <img src="images/berlin-germany.jpg" alt="France" class="best-destinations-link-image">
                             <button class="book-now">
                                 <span class="book-now-content">Book now</span>
                             </button>
@@ -388,7 +392,7 @@
                 <li class="best-destinations-item col-3 col-md-6 col-sm-3">
                     <div class="best-destinations-card">
                         <div class="best-destinations-images">
-                            <img src="images/scottland.jpg" alt="Scottland" class="best-destinations-link-image">
+                            <img src="images/berlin-germany.jpg" alt="Scottland" class="best-destinations-link-image">
                             <button class="book-now">
                                 <span class="book-now-content">Book now</span>
                             </button>
@@ -400,10 +404,10 @@
                         </div>
                     </div>
                 </li>
-                <li class="best-destinations-item col-3 col-md-6 col-sm-3">
+                <li class="best-destinations-item  col-3 col-md-6 col-sm-3">
                     <div class="best-destinations-card">
                         <div class="best-destinations-images">
-                            <img src="images/russia.jpg" alt="Russia" class="best-destinations-link-image">
+                            <img src="images/berlin-germany.jpg" alt="Russia" class="best-destinations-link-image">
                             <button class="book-now">
                                 <span class="book-now-content">Book now</span>
                             </button>
@@ -666,7 +670,14 @@
                         <path d="M15.9412 29.8235L22.1 21.6118a2.0001 2.0001 0 000-2.4L15.9412 11" stroke="#383838" stroke-width="2"/>
                     </svg>
                 </button>
-                <button class="best-destinations-hide-btn visible-btn clickable-btn">
+            </div>
+            <div class="best-destinations-block-nav">
+                <button class="homes-nav-btn visible-btn clickable-btn">
+                    <svg class="nav-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#F3F3F4"/>
+                        <path d="M15.9412 29.8235L22.1 21.6118a2.0001 2.0001 0 000-2.4L15.9412 11" stroke="#383838" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="homes-nav-btn visible-btn clickable-btn">
                     <svg class="nav-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#F3F3F4"/>
                         <path d="M15.9412 29.8235L22.1 21.6118a2.0001 2.0001 0 000-2.4L15.9412 11" stroke="#383838" stroke-width="2"/>
                     </svg>
@@ -675,33 +686,201 @@
         </div>
     </div>
 </section>
-<section class="sign-up">
-    <div class="container">
-        <div class="sign-up-inner">
-            <div class="sign-up-logo">
-                <a href="" class="sign-up-link">
-                    <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="43" cy="43" r="43" fill="#fff"/>
-                        <path d="M46.6518 55.7484c0-2.0561.5115-4.0303 1.473-5.7897-1.3605-.7672-2.3629-1.2684-2.7823-1.473-.133-.0614-.2046-.1944-.2046-.3376v-8.081c1.0127-.6751 1.6878-1.831 1.6878-3.1403v-8.3777c0-4.1633-3.3756-7.5491-7.5491-7.5491h-1.8003c-4.1633 0-7.5491 3.3756-7.5491 7.5491v8.3777c0 1.3093.6751 2.4652 1.6878 3.1403v8.081c0 .1432-.0819.2762-.2046.3376-1.1559.5626-6.7512 3.3858-11.9374 7.6514-.9411.7672-1.473 1.9231-1.473 3.1403v5.7386h32.9787c-.2762-.2251-.5319-.4706-.7876-.7263-2.2811-2.2811-3.5393-5.3192-3.5393-8.5413z" fill="#3077C6"/><path d="M58.7324 46.4807c-5.1145 0-9.2676 4.153-9.2676 9.2676s4.1531 9.2676 9.2676 9.2676c5.1146 0 9.2676-4.153 9.2676-9.2676s-4.1428-9.2676-9.2676-9.2676zm5.4215 10.6179h-4.0712v4.0711h-2.7005v-4.0711H53.311v-2.7005h4.0712v-4.0712h2.7005v4.0712h4.0712v2.7005z" fill="#3077C6"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="sign-up-content">
-                <div class="sign-up-trip-wrap">
-                    <svg class="sign-up-logo-trip" width="58" height="58" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="58" height="58" rx="4" fill="#3077C6"/>
-                        <path d="M2.5857 26.6094c-.0537-.0879-.1035-.2077-.1495-.3595a1.644 1.644 0 01-.069-.4793c0-.3116.0652-.5353.1955-.6711.138-.1358.3143-.2037.529-.2037h5.0139c.0536.0879.1035.2077.1495.3595s.069.3116.069.4793c0 .3116-.069.5353-.207.6711-.1304.1358-.3029.2037-.5175.2037H6.323v5.5362c-.0843.024-.2185.048-.4025.0719a3.918 3.918 0 01-.529.036c-.1763 0-.3335-.016-.4715-.0479-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.161-.1718-.207-.2996-.046-.1278-.069-.2956-.069-.5033v-4.6495h-1.725zM10.6427 32.1816c-.0767.024-.1993.0479-.368.0719a3.4306 3.4306 0 01-.506.0359c-.1686 0-.322-.0119-.46-.0359-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.1648-.1678-.2184-.2876-.046-.1278-.069-.2916-.069-.4913v-3.595c0-.1837.0306-.3395.092-.4673.069-.1358.1648-.2557.2874-.3595.1227-.1039.2722-.1957.4485-.2756a4.3036 4.3036 0 01.5865-.2277 4.2051 4.2051 0 01.644-.1438c.2223-.04.4447-.0599.667-.0599.368 0 .6593.0759.874.2277.2146.1438.322.3834.322.7189 0 .1119-.0154.2237-.046.3356a1.5933 1.5933 0 01-.115.2876c-.161 0-.3259.008-.4945.0239-.1687.016-.3335.04-.4945.0719a6.5947 6.5947 0 00-.46.1079c-.138.0319-.2568.0719-.3565.1198v4.0863zM13.3697 24.752c0-.3036.0958-.5592.2875-.7669.1993-.2077.46-.3116.782-.3116.3219 0 .5788.1039.7704.3116.1994.2077.299.4633.299.7669 0 .3036-.0996.5592-.299.7669-.1916.2077-.4485.3116-.7704.3116-.322 0-.5827-.1039-.782-.3116-.1917-.2077-.2875-.4633-.2875-.7669zm2.0469 7.4296c-.0843.016-.2108.0359-.3795.0599a2.53 2.53 0 01-.4944.0479c-.1687 0-.322-.0119-.46-.0359-.1304-.024-.2415-.0719-.3335-.1438-.092-.0719-.1649-.1678-.2185-.2876-.046-.1278-.069-.2916-.069-.4913v-4.8772c.0843-.016.207-.0359.368-.0599a2.7165 2.7165 0 01.506-.0479c.1686 0 .3181.012.4484.0359.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.0537.1198.0805.2796.0805.4793v4.8772zM19.2257 26.19c.46 0 .8854.0639 1.2764.1917.3987.1199.7399.3076 1.0235.5632.2837.2557.506.5792.667.9707.161.3834.2415.8428.2415 1.378 0 .5113-.069.9587-.207 1.3422-.138.3834-.3335.707-.5865.9706-.253.2556-.5596.4474-.92.5752-.3526.1278-.7474.1917-1.1844.1917-.3297 0-.6364-.0519-.92-.1558v1.9893c-.0767.0239-.1994.0479-.368.0719a2.7792 2.7792 0 01-.5175.0479c-.1687 0-.322-.012-.46-.036-.1303-.0239-.2415-.0719-.3335-.1438-.092-.0719-.161-.1717-.207-.2995-.046-.1199-.069-.2797-.069-.4794V27.616c0-.2157.0422-.3915.1265-.5273.092-.1358.2147-.2596.368-.3714.2377-.1598.5328-.2876.8855-.3835.3526-.0959.7475-.1438 1.1845-.1438zm.023 4.5776c.7896 0 1.1844-.4913 1.1844-1.474 0-.5112-.0996-.8907-.299-1.1384-.1916-.2476-.4714-.3714-.8394-.3714-.1457 0-.276.0199-.391.0599-.115.0319-.2147.0719-.299.1198v2.6363c.092.0479.1916.0879.299.1198.1073.032.2223.048.345.048zM29.7705 32.1456c-.0843.024-.2185.048-.4025.0719a3.917 3.917 0 01-.529.036c-.1763 0-.3335-.016-.4715-.0479-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.161-.1718-.207-.2996-.046-.1278-.069-.2956-.069-.5033v-1.8694h-2.2079v2.7561c-.0843.024-.2185.048-.4025.0719a3.9182 3.9182 0 01-.529.036c-.1763 0-.3335-.016-.4715-.0479-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.161-.1718-.207-.2996-.046-.1278-.069-.2956-.069-.5033v-6.3271c.0844-.016.2185-.036.4025-.06a3.0983 3.0983 0 01.529-.0479c.1763 0 .3297.016.46.0479.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.046.1278.069.2956.069.5033v1.9173h2.2079v-2.804c.0844-.016.2185-.036.4025-.06a3.0992 3.0992 0 01.529-.0479c.1764 0 .3297.016.46.0479.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.046.1278.069.2956.069.5033v6.3271zM36.8989 29.2817c0 .4953-.0728.9386-.2185 1.3301-.1456.3835-.3526.707-.621.9706-.2606.2637-.575.4634-.9429.5992-.368.1358-.7782.2037-1.2305.2037-.4523 0-.8625-.0719-1.2305-.2157-.368-.1438-.6861-.3475-.9545-.6111-.2606-.2717-.4638-.5992-.6095-.9827-.1456-.3834-.2185-.8148-.2185-1.2941 0-.4714.0729-.8988.2185-1.2822.1457-.3835.3489-.7071.6095-.9707.2684-.2716.5865-.4793.9545-.6231.368-.1438.7782-.2157 1.2305-.2157.4523 0 .8625.0759 1.2305.2277.3679.1438.6823.3515.9429.6231.2684.2636.4754.5872.621.9706.1457.3835.2185.8069.2185 1.2703zm-4.0249 0c0 .4873.0882.8627.2645 1.1264.184.2556.437.3834.759.3834s.5673-.1318.736-.3954c.1763-.2636.2645-.6351.2645-1.1144 0-.4794-.0882-.8469-.2645-1.1025-.1764-.2636-.4255-.3954-.7475-.3954-.322 0-.5712.1318-.7475.3954-.1763.2556-.2645.6231-.2645 1.1025zM37.8527 26.4536c.0766-.0239.1955-.0479.3565-.0719a3.683 3.683 0 01.5175-.0359c.1686 0 .3181.012.4485.0359.138.024.253.0719.3449.1438.092.0719.161.1718.207.2996.0537.1198.0805.2796.0805.4793v2.5764c0 .3276.0767.5632.23.707.1534.1358.3757.2037.667.2037.1764 0 .3182-.0159.4255-.0479.115-.0319.2032-.0639.2645-.0959v-4.1941c.0767-.0239.1955-.0479.3565-.0719a3.6852 3.6852 0 01.5175-.0359c.1687 0 .3182.012.4485.0359.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.0536.1198.0805.2796.0805.4793v3.6429c0 .3995-.161.699-.483.8988-.2683.1757-.5903.3075-.966.3954-.368.0959-.7705.1438-1.2075.1438-.414 0-.7973-.0479-1.15-.1438-.3449-.0959-.6439-.2437-.8969-.4434-.253-.1997-.4485-.4553-.5865-.7669-.138-.3195-.207-.703-.207-1.1504v-3.4272zM49.2608 30.456c0 .6072-.2185 1.0825-.6555 1.426-.437.3435-1.081.5153-1.9319.5153-.322 0-.621-.024-.897-.0719-.276-.0479-.5137-.1198-.713-.2157-.1917-.1039-.345-.2317-.46-.3835-.1073-.1518-.161-.3315-.161-.5392 0-.1917.0383-.3515.115-.4793.0767-.1359.1687-.2477.276-.3356.2223.1279.4753.2437.759.3475.2913.0959.6248.1438 1.0005.1438.2376 0 .4178-.0359.5405-.1078.1303-.0719.1954-.1678.1954-.2876 0-.1118-.046-.1997-.138-.2636-.0919-.0639-.2453-.1159-.4599-.1558l-.345-.0719c-.667-.1358-1.1653-.3475-1.495-.6351-.322-.2956-.483-.715-.483-1.2583 0-.2955.0613-.5632.184-.8028.1227-.2397.2952-.4394.5175-.5992.2223-.1598.4868-.2836.7935-.3715.3143-.0879.6593-.1318 1.035-.1318.2836 0 .5481.024.7934.0719.253.04.4715.1039.6555.1917.184.0879.3297.2038.437.3476.1073.1358.161.2995.161.4913 0 .1837-.0345.3435-.1035.4793-.0613.1278-.1418.2357-.2415.3235-.0613-.0399-.1533-.0798-.276-.1198a2.6827 2.6827 0 00-.4025-.1198 4.0613 4.0613 0 00-.4485-.0959c-.1456-.024-.2798-.0359-.4024-.0359-.253 0-.4485.0319-.5865.0958-.138.0559-.207.1478-.207.2756 0 .0879.0383.1598.115.2157.0766.056.2223.1079.437.1558l.3565.0839c.7359.1758 1.2573.4194 1.5639.731.3143.3035.4715.699.4715 1.1863zM53.2175 32.3853c-.4523 0-.8739-.0639-1.2649-.1917-.3834-.1358-.7207-.3356-1.012-.5992-.2837-.2636-.5098-.5952-.6785-.9946-.161-.3994-.2415-.8668-.2415-1.402 0-.5273.0805-.9787.2415-1.3541.1687-.3835.3872-.6951.6555-.9347a2.4601 2.4601 0 01.92-.5393 3.2033 3.2033 0 011.0579-.1797c.4064 0 .7744.0639 1.104.1917.3373.1278.6248.3036.8625.5273.2453.2237.4332.4913.5635.8029.138.3115.207.651.207 1.0185 0 .2717-.0728.4794-.2185.6232-.1457.1438-.3488.2356-.6095.2756l-2.8404.4433c.0843.2637.2568.4634.5175.5992.2606.1278.5596.1917.8969.1917.3144 0 .6095-.0399.8855-.1198.2837-.0879.5137-.1877.69-.2996.1227.0799.2262.1918.3105.3356.0843.1438.1265.2955.1265.4553 0 .3595-.161.6271-.483.8029-.2453.1358-.5213.2277-.828.2756-.3066.0479-.5941.0719-.8625.0719zm-.322-4.7094c-.184 0-.345.032-.4829.0959-.1304.0639-.2377.1478-.322.2516-.0844.0959-.1495.2077-.1955.3356a1.5044 1.5044 0 00-.069.3714l1.9664-.3355c-.023-.1598-.1073-.3195-.253-.4793-.1456-.1598-.3603-.2397-.644-.2397z" fill="#fff"/>
-                    </svg>
+<section class="sign-up-guests-reviews">
+    <section class="sign-up">
+        <div class="container">
+            <div class="sign-up-inner">
+                <div class="sign-up-logo">
+                    <a href="" class="sign-up-link">
+                        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="43" cy="43" r="43" fill="#fff"/>
+                            <path d="M46.6518 55.7484c0-2.0561.5115-4.0303 1.473-5.7897-1.3605-.7672-2.3629-1.2684-2.7823-1.473-.133-.0614-.2046-.1944-.2046-.3376v-8.081c1.0127-.6751 1.6878-1.831 1.6878-3.1403v-8.3777c0-4.1633-3.3756-7.5491-7.5491-7.5491h-1.8003c-4.1633 0-7.5491 3.3756-7.5491 7.5491v8.3777c0 1.3093.6751 2.4652 1.6878 3.1403v8.081c0 .1432-.0819.2762-.2046.3376-1.1559.5626-6.7512 3.3858-11.9374 7.6514-.9411.7672-1.473 1.9231-1.473 3.1403v5.7386h32.9787c-.2762-.2251-.5319-.4706-.7876-.7263-2.2811-2.2811-3.5393-5.3192-3.5393-8.5413z" fill="#3077C6"/><path d="M58.7324 46.4807c-5.1145 0-9.2676 4.153-9.2676 9.2676s4.1531 9.2676 9.2676 9.2676c5.1146 0 9.2676-4.153 9.2676-9.2676s-4.1428-9.2676-9.2676-9.2676zm5.4215 10.6179h-4.0712v4.0711h-2.7005v-4.0711H53.311v-2.7005h4.0712v-4.0712h2.7005v4.0712h4.0712v2.7005z" fill="#3077C6"/>
+                        </svg>
+                    </a>
                 </div>
-                <p class="sign-up-info">Sign up <span> in the app</span> and get 20% off your first booking</p>
-                <a href="#" class="sign-up-btn"><span>Sign up</span></a>
-                <button type="button" class="sign-up-close">
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M26 1.4857L24.5144 0 13 11.5143 1.4857 0 0 1.4857 11.5143 13 0 24.5144 1.4857 26 13 14.4857 24.5144 26 26 24.5144 14.4857 13 26 1.4857z" fill="#BFBFBF"/>
-                    </svg>
-                </button>
-                <button type="button" class="sign-up-install-btn">Install</button>
+                <div class="sign-up-content">
+                    <div class="sign-up-trip-wrap">
+                        <svg class="sign-up-logo-trip" width="58" height="58" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="58" height="58" rx="4" fill="#3077C6"/>
+                            <path d="M2.5857 26.6094c-.0537-.0879-.1035-.2077-.1495-.3595a1.644 1.644 0 01-.069-.4793c0-.3116.0652-.5353.1955-.6711.138-.1358.3143-.2037.529-.2037h5.0139c.0536.0879.1035.2077.1495.3595s.069.3116.069.4793c0 .3116-.069.5353-.207.6711-.1304.1358-.3029.2037-.5175.2037H6.323v5.5362c-.0843.024-.2185.048-.4025.0719a3.918 3.918 0 01-.529.036c-.1763 0-.3335-.016-.4715-.0479-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.161-.1718-.207-.2996-.046-.1278-.069-.2956-.069-.5033v-4.6495h-1.725zM10.6427 32.1816c-.0767.024-.1993.0479-.368.0719a3.4306 3.4306 0 01-.506.0359c-.1686 0-.322-.0119-.46-.0359-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.1648-.1678-.2184-.2876-.046-.1278-.069-.2916-.069-.4913v-3.595c0-.1837.0306-.3395.092-.4673.069-.1358.1648-.2557.2874-.3595.1227-.1039.2722-.1957.4485-.2756a4.3036 4.3036 0 01.5865-.2277 4.2051 4.2051 0 01.644-.1438c.2223-.04.4447-.0599.667-.0599.368 0 .6593.0759.874.2277.2146.1438.322.3834.322.7189 0 .1119-.0154.2237-.046.3356a1.5933 1.5933 0 01-.115.2876c-.161 0-.3259.008-.4945.0239-.1687.016-.3335.04-.4945.0719a6.5947 6.5947 0 00-.46.1079c-.138.0319-.2568.0719-.3565.1198v4.0863zM13.3697 24.752c0-.3036.0958-.5592.2875-.7669.1993-.2077.46-.3116.782-.3116.3219 0 .5788.1039.7704.3116.1994.2077.299.4633.299.7669 0 .3036-.0996.5592-.299.7669-.1916.2077-.4485.3116-.7704.3116-.322 0-.5827-.1039-.782-.3116-.1917-.2077-.2875-.4633-.2875-.7669zm2.0469 7.4296c-.0843.016-.2108.0359-.3795.0599a2.53 2.53 0 01-.4944.0479c-.1687 0-.322-.0119-.46-.0359-.1304-.024-.2415-.0719-.3335-.1438-.092-.0719-.1649-.1678-.2185-.2876-.046-.1278-.069-.2916-.069-.4913v-4.8772c.0843-.016.207-.0359.368-.0599a2.7165 2.7165 0 01.506-.0479c.1686 0 .3181.012.4484.0359.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.0537.1198.0805.2796.0805.4793v4.8772zM19.2257 26.19c.46 0 .8854.0639 1.2764.1917.3987.1199.7399.3076 1.0235.5632.2837.2557.506.5792.667.9707.161.3834.2415.8428.2415 1.378 0 .5113-.069.9587-.207 1.3422-.138.3834-.3335.707-.5865.9706-.253.2556-.5596.4474-.92.5752-.3526.1278-.7474.1917-1.1844.1917-.3297 0-.6364-.0519-.92-.1558v1.9893c-.0767.0239-.1994.0479-.368.0719a2.7792 2.7792 0 01-.5175.0479c-.1687 0-.322-.012-.46-.036-.1303-.0239-.2415-.0719-.3335-.1438-.092-.0719-.161-.1717-.207-.2995-.046-.1199-.069-.2797-.069-.4794V27.616c0-.2157.0422-.3915.1265-.5273.092-.1358.2147-.2596.368-.3714.2377-.1598.5328-.2876.8855-.3835.3526-.0959.7475-.1438 1.1845-.1438zm.023 4.5776c.7896 0 1.1844-.4913 1.1844-1.474 0-.5112-.0996-.8907-.299-1.1384-.1916-.2476-.4714-.3714-.8394-.3714-.1457 0-.276.0199-.391.0599-.115.0319-.2147.0719-.299.1198v2.6363c.092.0479.1916.0879.299.1198.1073.032.2223.048.345.048zM29.7705 32.1456c-.0843.024-.2185.048-.4025.0719a3.917 3.917 0 01-.529.036c-.1763 0-.3335-.016-.4715-.0479-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.161-.1718-.207-.2996-.046-.1278-.069-.2956-.069-.5033v-1.8694h-2.2079v2.7561c-.0843.024-.2185.048-.4025.0719a3.9182 3.9182 0 01-.529.036c-.1763 0-.3335-.016-.4715-.0479-.1303-.024-.2415-.0719-.3335-.1438-.092-.0719-.161-.1718-.207-.2996-.046-.1278-.069-.2956-.069-.5033v-6.3271c.0844-.016.2185-.036.4025-.06a3.0983 3.0983 0 01.529-.0479c.1763 0 .3297.016.46.0479.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.046.1278.069.2956.069.5033v1.9173h2.2079v-2.804c.0844-.016.2185-.036.4025-.06a3.0992 3.0992 0 01.529-.0479c.1764 0 .3297.016.46.0479.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.046.1278.069.2956.069.5033v6.3271zM36.8989 29.2817c0 .4953-.0728.9386-.2185 1.3301-.1456.3835-.3526.707-.621.9706-.2606.2637-.575.4634-.9429.5992-.368.1358-.7782.2037-1.2305.2037-.4523 0-.8625-.0719-1.2305-.2157-.368-.1438-.6861-.3475-.9545-.6111-.2606-.2717-.4638-.5992-.6095-.9827-.1456-.3834-.2185-.8148-.2185-1.2941 0-.4714.0729-.8988.2185-1.2822.1457-.3835.3489-.7071.6095-.9707.2684-.2716.5865-.4793.9545-.6231.368-.1438.7782-.2157 1.2305-.2157.4523 0 .8625.0759 1.2305.2277.3679.1438.6823.3515.9429.6231.2684.2636.4754.5872.621.9706.1457.3835.2185.8069.2185 1.2703zm-4.0249 0c0 .4873.0882.8627.2645 1.1264.184.2556.437.3834.759.3834s.5673-.1318.736-.3954c.1763-.2636.2645-.6351.2645-1.1144 0-.4794-.0882-.8469-.2645-1.1025-.1764-.2636-.4255-.3954-.7475-.3954-.322 0-.5712.1318-.7475.3954-.1763.2556-.2645.6231-.2645 1.1025zM37.8527 26.4536c.0766-.0239.1955-.0479.3565-.0719a3.683 3.683 0 01.5175-.0359c.1686 0 .3181.012.4485.0359.138.024.253.0719.3449.1438.092.0719.161.1718.207.2996.0537.1198.0805.2796.0805.4793v2.5764c0 .3276.0767.5632.23.707.1534.1358.3757.2037.667.2037.1764 0 .3182-.0159.4255-.0479.115-.0319.2032-.0639.2645-.0959v-4.1941c.0767-.0239.1955-.0479.3565-.0719a3.6852 3.6852 0 01.5175-.0359c.1687 0 .3182.012.4485.0359.138.024.253.0719.345.1438.092.0719.161.1718.207.2996.0536.1198.0805.2796.0805.4793v3.6429c0 .3995-.161.699-.483.8988-.2683.1757-.5903.3075-.966.3954-.368.0959-.7705.1438-1.2075.1438-.414 0-.7973-.0479-1.15-.1438-.3449-.0959-.6439-.2437-.8969-.4434-.253-.1997-.4485-.4553-.5865-.7669-.138-.3195-.207-.703-.207-1.1504v-3.4272zM49.2608 30.456c0 .6072-.2185 1.0825-.6555 1.426-.437.3435-1.081.5153-1.9319.5153-.322 0-.621-.024-.897-.0719-.276-.0479-.5137-.1198-.713-.2157-.1917-.1039-.345-.2317-.46-.3835-.1073-.1518-.161-.3315-.161-.5392 0-.1917.0383-.3515.115-.4793.0767-.1359.1687-.2477.276-.3356.2223.1279.4753.2437.759.3475.2913.0959.6248.1438 1.0005.1438.2376 0 .4178-.0359.5405-.1078.1303-.0719.1954-.1678.1954-.2876 0-.1118-.046-.1997-.138-.2636-.0919-.0639-.2453-.1159-.4599-.1558l-.345-.0719c-.667-.1358-1.1653-.3475-1.495-.6351-.322-.2956-.483-.715-.483-1.2583 0-.2955.0613-.5632.184-.8028.1227-.2397.2952-.4394.5175-.5992.2223-.1598.4868-.2836.7935-.3715.3143-.0879.6593-.1318 1.035-.1318.2836 0 .5481.024.7934.0719.253.04.4715.1039.6555.1917.184.0879.3297.2038.437.3476.1073.1358.161.2995.161.4913 0 .1837-.0345.3435-.1035.4793-.0613.1278-.1418.2357-.2415.3235-.0613-.0399-.1533-.0798-.276-.1198a2.6827 2.6827 0 00-.4025-.1198 4.0613 4.0613 0 00-.4485-.0959c-.1456-.024-.2798-.0359-.4024-.0359-.253 0-.4485.0319-.5865.0958-.138.0559-.207.1478-.207.2756 0 .0879.0383.1598.115.2157.0766.056.2223.1079.437.1558l.3565.0839c.7359.1758 1.2573.4194 1.5639.731.3143.3035.4715.699.4715 1.1863zM53.2175 32.3853c-.4523 0-.8739-.0639-1.2649-.1917-.3834-.1358-.7207-.3356-1.012-.5992-.2837-.2636-.5098-.5952-.6785-.9946-.161-.3994-.2415-.8668-.2415-1.402 0-.5273.0805-.9787.2415-1.3541.1687-.3835.3872-.6951.6555-.9347a2.4601 2.4601 0 01.92-.5393 3.2033 3.2033 0 011.0579-.1797c.4064 0 .7744.0639 1.104.1917.3373.1278.6248.3036.8625.5273.2453.2237.4332.4913.5635.8029.138.3115.207.651.207 1.0185 0 .2717-.0728.4794-.2185.6232-.1457.1438-.3488.2356-.6095.2756l-2.8404.4433c.0843.2637.2568.4634.5175.5992.2606.1278.5596.1917.8969.1917.3144 0 .6095-.0399.8855-.1198.2837-.0879.5137-.1877.69-.2996.1227.0799.2262.1918.3105.3356.0843.1438.1265.2955.1265.4553 0 .3595-.161.6271-.483.8029-.2453.1358-.5213.2277-.828.2756-.3066.0479-.5941.0719-.8625.0719zm-.322-4.7094c-.184 0-.345.032-.4829.0959-.1304.0639-.2377.1478-.322.2516-.0844.0959-.1495.2077-.1955.3356a1.5044 1.5044 0 00-.069.3714l1.9664-.3355c-.023-.1598-.1073-.3195-.253-.4793-.1456-.1598-.3603-.2397-.644-.2397z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <p class="sign-up-info">Sign up <span> in the app</span> and get 20% off your first booking</p>
+                    <a href="#" class="sign-up-btn"><span>Sign up</span></a>
+                    <button type="button" class="sign-up-close">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26 1.4857L24.5144 0 13 11.5143 1.4857 0 0 1.4857 11.5143 13 0 24.5144 1.4857 26 13 14.4857 24.5144 26 26 24.5144 14.4857 13 26 1.4857z" fill="#BFBFBF"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="sign-up-install-btn">Install</button>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="guests-reviews">
+        <div class="container">
+            <div class="guests-reviews-header">
+                <h3 class="h3-text"><span>Guests</span> reviews</h3>
+            </div>
+            <div class="guests-reviews-cards">
+                <ul class="guests-reviews-list">
+                    <li class="guests-reviews-item col-4 col-md-6 col-sm-3">
+                        <div class="gr-list-card">
+                            <div class="gr-card-images">
+                                <img src="images/bali-indonesia.jpg" alt="bali-indonesia" class="gr-card-image">
+                                <div class="gr-card-price"><a href="" class="gr-card-price-link">From <span>250 USD</span></a></div>
+                            </div>
+                            <div class="gr-card-content">
+                                <div class="gr-card-middle">
+                                    <div class="gr-card-header">
+                                        <a href="" class="gr-card-title-link"><h5 class="gr-card-title">Ubud Bali Resort&SPA</h5></a>
+                                        <p class="gr-card-subtitle">Bali, Indonesia</p>
+                                    </div>
+                                    <div class="gr-card-score">
+                                        <div class="gr-card-point"><span>9,4</span></div>
+                                        <p class="gr-card-reviews">1324 reviews</p>
+                                    </div>
+                                </div>
+                                <div class="gr-card-user">
+                                    <div class="gr-card-usericon">
+                                        <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M27.0002.3333C12.2802.3333.3335 12.2799.3335 26.9999c0 14.72 11.9467 26.6667 26.6667 26.6667 14.72 0 26.6666-11.9467 26.6666-26.6667 0-14.72-11.9466-26.6666-26.6666-26.6666zm0 8c4.4266 0 8 3.5733 8 8 0 4.4266-3.5734 8-8 8-4.4267 0-8-3.5734-8-8 0-4.4267 3.5733-8 8-8zm0 37.8666c-6.6667 0-12.56-3.4133-16-8.5866.08-5.3067 10.6666-8.2134 16-8.2134 5.3066 0 15.92 2.9067 16 8.2134-3.44 5.1733-9.3334 8.5866-16 8.5866z" fill="#BFBFBF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="gr-card-userprofile">
+                                        <p class="gr-card-username">Hanna Ivanova</p>
+                                        <div class="gr-card-nationality">
+                                            <svg class="gr-card-nationality-flag" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M0 18.26H18V0.26H0V18.26Z" fill="url(#pattern0)"/>
+                                                <defs>
+                                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0" transform="scale(0.015625)"/>
+                                                    </pattern>
+                                                    <image id="image0" width="64" height="64" xlink:href="data:image/png;base64,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"/>
+                                                </defs>
+                                            </svg><span>Ukraine</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gr-card-footer">
+                                    <p class="gr-card-comments">Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay are the staff. All of the people are incredibly helpful and generous with their time and advice.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="guests-reviews-item col-4 col-md-6 col-sm-3">
+                        <div class="gr-list-card">
+                            <div class="gr-card-images">
+                                <img src="images/rotterdam-netherlands.jpg" alt="rotterdam-netherlands" class="gr-card-image">
+                                <div class="gr-card-price"><a href="" class="gr-card-price-link">From <span>40 USD</span></a></div>
+                            </div>
+                            <div class="gr-card-content">
+                                <div class="gr-card-middle">
+                                    <div class="gr-card-header">
+                                        <a href="" class="gr-card-title-link"><h5 class="gr-card-title">King Kong Hostel</h5></a>
+                                        <p class="gr-card-subtitle">Rotterdam, Netherlands</p>
+                                    </div>
+                                    <div class="gr-card-score">
+                                        <div class="gr-card-point"><span>8,9</span></div>
+                                        <p class="gr-card-reviews">2016 reviews</p>
+                                    </div>
+                                </div>
+                                <div class="gr-card-user">
+                                    <div class="gr-card-usericon">
+                                        <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M27.0002.3333C12.2802.3333.3335 12.2799.3335 26.9999c0 14.72 11.9467 26.6667 26.6667 26.6667 14.72 0 26.6666-11.9467 26.6666-26.6667 0-14.72-11.9466-26.6666-26.6666-26.6666zm0 8c4.4266 0 8 3.5733 8 8 0 4.4266-3.5734 8-8 8-4.4267 0-8-3.5734-8-8 0-4.4267 3.5733-8 8-8zm0 37.8666c-6.6667 0-12.56-3.4133-16-8.5866.08-5.3067 10.6666-8.2134 16-8.2134 5.3066 0 15.92 2.9067 16 8.2134-3.44 5.1733-9.3334 8.5866-16 8.5866z" fill="#BFBFBF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="gr-card-userprofile">
+                                        <p class="gr-card-username">Adam Smith</p>
+                                        <div class="gr-card-nationality">
+                                            <svg class="gr-card-nationality-flag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19 19" fill="none">
+                                                <path d="M0 18.26H18V0.26H0V18.26Z" fill="url(#pattern1)"/>
+                                                <defs>
+                                                    <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image1" transform="scale(0.015625)"/>
+                                                    </pattern>
+                                                    <image id="image1" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABZGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iPgogICAgICAgICA8eG1wOkNyZWF0b3JUb29sPkFkb2JlIEltYWdlUmVhZHk8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CmowMFcAABcwSURBVHja7Zt5dFxnmaef77v31q29tC+WbMmS99hxbIIhK8Rh7RCSNJBpAp0eCCHd0BzWmZOmGYYcaDLdnYZphqQ5MD1plgATsjAhK43BgYRsncVxrHiTJVlSaVdVqfZ7v2X+KNnxEMZi5kyf+QNfnSodXZXuue/zvff3bp+EtZbf50Pye36cAXAGwBkAZwCcAXAGwBkAZwD83h7ub54479ov0d3eRDzmI6WDBIQUSCmwCIQQSCRIgRAghABAIBBSIpavI6RcPr/8LiwFL85FhVEuKIySc+PLv7PLn7InP934EwECLAJrLdaaVmPpMsau0kYPGGyzNcYx1vrWGNdaWwSWrLFLWMbBHnGkmJQIpAQTKGqz81x57x2nB/D/5ViGiJAgaLNwlrGcA3bAGL3aarPaarPKat1ulfJQCpQCo0EbsAZrwYjGNYwjEVIuGM8bdzzvRVfKvcKxvxBSjq7oAf/6xi4b3PCQTivYYqzdZi070OostNkijUk4WiMDhajXoVyFpSI2X8SWSthqDVOvo5XChBptNdpajBBYR2KiUWxLptXpaGuVLc3n2GTi2lArq8PwceCi0wIQQlxrEQ84UiwgBPxfVouNRRXIVy7R7km2ANtD2K602i60WSe1zjhK49QDnGIJmSvgLORxgwDHghASEYsiUknsqm5EcwY6WjHRCNoYtOOgsahCibBYxFQq6PlF1OQUHDqGUwsRnkMhkxRLrrxwRQ8o14Jv55Yqxajn/DwRk49Zy35t7TFXylGNCKUQCERDA5b1oaGmAiFFqyvoKge6B2364r6zBujLFeubtLFn1Zti8aBUJ7GQI6iCu7CIk1/CKVfxPBcvlcLr7MDbthWvfzVu/2pEOg3tLdDTBek0dlkt9PJLLb80YE6cq5XQI8dhahY5NYPcdxD966eYHBpaWQRjps4Nb92Z+tbeiSu8SvWKTMylroxJ+O54MubOhprifCEoNCf9WjrhRZU2/lSuGkn4blc66XeX6ro1Fo3gSMlMIWS6UOePL13PquYU1z08z+sPZund/ziiZx1+Vzve1rPw1q/FW9uHt2UDXl/vq25KASFQL5epj09SPz6JKi6h6iFhuYIKA4jHsIkYNhpBtLTgbRggsnkLccB/HwTjY6T/+z0rA3h5bIEH9s1zYFoxO1lg9+t6+NI12+V/unt/3/6jxb7etjjvPn8tTx6e58XjJRxHcv1bN3J4qsSPnpigEgr+28d2MltUvP8/P4nrulxcjDBV1UwdnsPsPJfYR95Cz4aNeGv7XnUDobVUDg+jjo6gRsdR+SWCiSzBRJZwIUcwM0eQy6GqNbTShCpAE2JwMEJipYBUGnegm0jPapJnbSR94eux6/qJvX33ygCWlqrc8U/P0n/hFq7avY5fDc1x+y8mGJoJOXqkwkItwg2dHcztL/KrfZOkOlJ8KJbh+FKVo4vQ1Rzjr+4bYXyuwvsv3Uh3c5wvfn8/0nehVMZ95/tgR4bY8qpWDg+jDg8THhkhPDyMGp1ATWSxhSVMbVnotMZogzYarTQ2DLAoLBqBwRJisRhrsNpi83nUc2Oo555B/cSjnmynuHEthfVr4Af/dHoAmdY4QSZFQgo+c+UWfvnSXr711cdoPb+Pe7/4Jm668wBXfeph3I4kX//MG/jnfdO8/y/3gOfw07+7jAOTS3zy8z+DqMdN791OoC0IGOxIcCSVRv1sLzw6ztTQKHp4FDU7j8nlIQgbeYa1WABrEY6DTCSQMR8bj+NlUtiOVkRXOzoaQWuD8Vy0sKj8EmF+CV0qo2bnCCcmEHNLCFXDlEoELx2icvDgyh6wuTPFp//tJfzJrS/yxs88RLo1Tv95fZQtjC1WCJWGUh3dEqOjOYY0gNZ47QnueWqcF0fzXPK2DTQ1xbnu1qeo5Gvc+vEL2dyTYvdth6k/+GN4+oeUou1IScNgIRGui9OUwu1dhde7isi2TThtrcj2FkRPN7alGVIJTKYhhOoUEdRYlAowQYAOQnSxhJqegek55MQU9tn9lJ76F8Tx0ZUB7BvLc+uDhwgAdXSRlt4M9/7HS3nPzb/kEzf+lMTWLu667Qr+4aEjXP2JB6A1wY+/ejmPvTzHLbc9CVGPX3zjD8kuVrn3/kMQ93lhdJH9YzlEzMNRGlwHr6cTr6sDb/1a3NU9RLZuwu3rJbJpHdLzXnWj6hTl18s5vDmZO5pGFhr1cXwfEY/jtLXgnLMN34viA/ql/cz9+P6VAVSrIXsfOcqaXRu59IbX8uNnJvnTrz/JfCmETJQwNORqmlBb0BY8ydGZIkMTBfzeDJ1tCT78D08xm6tx/XvPoa8jyee++zzCdaC9Fffi8+Fju1n1mnNxVnXhxKKnzScsoIOA+uw8wfFJgpk5apNZwnweHWrCchlVD7DJODYRh5iP6G7D6+sn0tONXdUFkSju6h5ib7xgZQCZphi0pvGwfPjyzTx6aJ7H7hoi9dpeHvja5fzN3S9z/acfhN4M3/rrt/HYgVk+86VfQCzCz75+JeMLFT7wFz8F1+G8D3WQjkdwIi7rutMcGpnBef/b4A09RH6LsaZYRo2NExwaJjxyDJWdRk3PEs4tEC7mCBYWUYUiYa2GUiEajUahUGhoCCEGi4dItRHtX0ViYJD0Gy4g2LoBa4OVAfQ3x7jpz9/IB27dz3kfuY+W7hTrL+5noao5MLFEKdQQcUAIEr5HGFqIRYi2J/n+L0cZzi6x+9JBOtuS/Nk3nqJeqPOVj53PBZs6eN2H7sZo01jZUpng4NFXDB4eRY1OoKemscUyplZDWIHBNDI+rbFhCFo3CjLHxRqJsQ4SF0OIIcSisWhMcZL6/lnYv5/wJz+l0N1BfrAX3vK2FfKAbJFb7hlCSwHZJdzuFPd9+c1c+7eP8+8/9SBs6+Kur13OHXtGueZj90FLnPtu+QNeGMvz+S/+AnyXh//xPZSqih/cfxAyUV4YzTE8XUQMroZH9sB3Hid7bA49PYtdKoKxy4X5ct6sDU48ikgmkX4ENxmH9jZob4WWDPR0oxNRtDZoR6KtJcznCXNLmGqZMDtNePgYdmEBOZOHagUzv0C9kFvZA4Ka4rF7DrDlHTv57G1X8Jl/fI5r/+pRZqqa3vPWsGQsk3MVirUQuhLEMzH2jSzy68MLvP7N60imonzga4+zkK/xtU9fTF9Hkis++wh4Enadg/nlQ/DE3QSZVUhso2z2IzhNaZyebty+HrzNG/AG+nAH+hBNGUQyjm3KnFR/c4oohieF0aKtbuQMtTq6UIBcAWd6Dp7dT23vr5Av7l8ZwEBvmrN2b+SFbEChEiIcyTP3DJG+eC3P/P07+PNvPMPHP/kAbGjlmduu4vuPjvAfbtoDmThPfedqXhwrcP2ND0NTnIVSwPGFWbZs7mTrmgx3zgZox4PVq4hueQ2RgTV4g/14m9bjrunBWz8AUvxWMTyR55/oHFjAYDD1OiYMMa4LUmKtQfgR3I4OZEc7/tat+G+6hPq176L5/odeXbT95mxw29s/bm/66GV88JtDFJ7L0vH6NVxzUT93/nqCTd0Zji1WKZUCQim4+sJBnj2WY7FQJxaLEBrLTK7Gp684i2g8wo3/5QkoB3z3b/+Araub2fHRB7j57Z3ceNk6WLv2f2vsyQigNCZfIJieIZiaJZhboD42Tn10nKBUwhhNWK4SBgE2FYNUAhvxER1tRLasI9K7msS6tSS6upktFji4bx9/eOHF4rQe8NLEEu+++VFSbW1EB1vxgfdeOsjeoXl+/r0XYEcPQ//1Km7+4X6+9dXHoCfD/u/9ET95Nstnb9oD6Shre9JMzldp6kzS15Xi7+8/iBASTJ3Ijm0w2P3qFV7MoyamCIYOoYZHCQ8No6Zm0MUSYb5AmC+gyhV0GKLCEGXUcgwwKPTJd4PFYhHE8FJtJNb3kb7gPMrnnIVORlb2AHHOBy2LcTp3ruP+L76Z67/yBC/smybZ28Tlu3p5djjPxq4Uh6bLNKd8AiNIRz2GZ0q8+4J+Ygmfm7/9HNQ03/z8m9i1vo1zPnwveA7EInzlhvP55EVd1J9/iXDkOMGBQ+jJacKRMczMPKZUxgbBckNBYIxBqxCtNdoYjBBo10FLgdIGLUBbg6pUUKq+HA3qWAweMSJ4RHDJJeKMr+niw0NPn94D+tvifOj6i/naI1m+fMeLLNZDKNYplQM++a6t3HLXEHfe+iSsbeGZ26/mkRem+dxnfwotcc69bhdzhToIQbo3zV2/HuO7e4/xjjeu5U1nd/GJR2ap3PEj+MJDzMxUsaUyYBGWRhVnLViLjMeQrc3IdBpamxDtrZBKNqLAmlXQ3taoAaxFSdEoi5aWCBcL6GKZcGaa4OgwdmQKZ3oGMT2HrQWo45Mri+DxhRpu1COR8bn3R/tJbenkh7e9k7+5e4iLPnIfbibG5Tfs4thMiT/68l7ydc01N+zCAO//671QUXzzs7vpbo5x+ed/BsrypRt28ZrBNpAFyodH4bkX0JkepBQI38dpa8Xp6sDtX01k0zrcdf1ENm9AtjYjUsmTImheVQP8lihgTEMkawFUyniLBdg3RLDnUdzHn1gZQKtU3PgXD0JrJzQnKNYt2aUA33epl0NC3+Uv33023/vlCF//9vOQjHLdW9azf6LAD/eM4LcleezoIjUFuB6kXD53+3NQq8OaXlpakrD7YlJbd+Jv3oA32I87sAZ3dc+KrUR7AkJQJyyW0UYRVmuoMMT6EUwkgnUdrO8jfQ/pN+O1d+Jv3EDLWy+mec/elTXgO9+41VZME/vHA54bKfDyTJnCsQKkEuB7YAWkYg0FVxYcp3FX1oDvEol5BKUamZTPuevaaIt7rOtOsa47w87+JtZ1p4l3t63YU7SlMmo8i5pfIFwsEGSnCMaz1KemqWenCQpLaK1R9TqqHmDiUWwigYhHEN2teIPriW4aILF+PcmtW5gPqhx6fh9XrRQFbHc3b966ng+3ZMjnK0zPl5mYq3AkW2ShFFINDBOLVRCCTMLHcV2Uga6mGBt7MrS3JmhPxVjTFifdlgLfX7H5rKdnUZNThENHUKPjBC8fQU9k0Yt5dKmEWm57aaXRSqG0bhhvNSdiQSMBVhg0FoNF4pEk3tZBctdOyru2U+9ohgsvPr0HfP2mL9htV15J99Yt+AKSVpESmohW4IiGHyrTUGnHAccFHMBfeVVPGHtoGDVynOClg41VHhtHL+Sw5UojAkin4fOm0eXRxpxsexvfw6ZTaM9tgBCiIYZLRdRSCRWWMfUqmiouLjFieLgsug5j7U38Wfbg6T0gf9PfMf8/Hib6xkuInbuDymA/+Z5Vjfrai+OybPdyTe6caPWfSjWXx+by2PwSZnwSPTKOGh5DDY9g5uYxswtQq2NP7aFrgxUCmUoimzK4a3pwelYh0glEcxN0d0BnGzadgs52dCyCDhXagrIGtZwvmHqVMDtLeOgodiKLM5aFw8cQc/PYXGFlETS2QvX5p8k9/y8skcLtaCPS04s/0IfX0YabSuO2ZHDiMaSxOMZCGGIXctj5RexiDjufw+byUKpArQb1AGEt0nWXaUmklIhYDKerHaezHW/dWtyBPrx1a4lsGMDpXdXoIZx4TH6L+suT4C0CjWMs1lp8a8CC1AavVkMcHSV8eA+Rf/75ygDiF+7GOzoC01ksRcLZCmZ2kvD5pxq9fxwcXCQOcnnw4UjZKFGFbMwTHYlsDA4bNxmNIjNp3PZWIoP9OKt78M/aiDewBm/9AE5764qPzokQGORyBLPzhKVS4xGo1RqpcCwKySQ2GoF4HNnSgoz5yGgc/9wW0hvW0vy67b9DQ+RTf0pHMk3m2BjBUy+gj49hRqZgbhZRDRDacEI3hJTgSKyUSN9HJpO4LU24rS14zRnc7k68Nb1EVncT2bIRr6cbr6NtZWPzhYYQzs6j5hYIxicJ5uapz+cIpqYJZmZRpTLaaFQ9RKsQ40cakcD3kC0teFsGiPYPkjh7I+J1r8VGfUQivjIAXIfIpg2kLnkD4gPva8zl5uYx2SlsbglRrkCxhAgUTsTD8TxkJNJY3dYW3K4OnI423GgUd9lF5W9oxCuPm0WNjaOOZwmHDqPGJwgODqOmZ9FTs40xl1InW+Mn0mGtQpQOT0YAhcaULGqhUQcAlJ/+OS4eJTdFaeNmyuduo9rfDedfePoo8JV/c43d/q4r6XnDRbitLUjXxUEuu/8r4idPEcFTfxanGH3q5gNbD9CjY6hjxwmPjaEOHiUcz6JGx9FLRWy5AkphHQexPCm3CIwAIwV4HiYew2ZS2OYMOuI1gDiiIYJLRdTiUqMjvJhDFxeQKHw8IiJGzoGxRISP5sdPHwVKd/6AmXsfwTl3J9Fzd+BvHMBfO0BkYA1uJo2NRnHicYh4JwsWC+hqDRbz2KUiJl+A7Ax6dg6zkMMcHUGNTKDn5jG5AoQhQjZmjBbRGHM7DrKpqSGwq3saDZHuTuhqh/ZWRDqFbW/BdrRBKnUyNT4hjoEKUAuLqKUi4ews4ZFhzMgkzsQU7BtCHDmKrVV+h0cADxMuUnliD7Un9iKJ4kUzeD2duE3NuOkkTlMTbjyKNLah7tZi84VGeCuWoVJF1AMIQ6TW4LgnDRauRLouMp3CXdWJ092Jt2EQr68Hd9N6vIE+vK6OV21dOaH8dSCYnml0hZUmrNXQYYhNJCCTxG1K4w72kbrgApxlA8XCAvrBR5i5/+GVAaSvv4746CTegUPo7ASGAFWbxwwvEp6MA41HQp74Wg5rv/ldeC4kEjjNGbyeLrzBfiJrevHO2kBkzWq8bZvwIq+u0XWlSnV0nHBsnGB6lmAhR21qhlp2iurMLNWZWYJSGaU0KqhjtAY/CqkYTsLHbWklumEd0fX9pDZtJnPJBWT++Bpadp39uwD4E7rWryczNk71mWfRR49jho9jjo9DoQy1OqJaRWiD47pIx0G6Dk4mjdfehtfajNvdibuqC2+5z+dvHMRfuwbP9V61smEuT3DgEPXjE9RfPkJ1bJzKsVEqUzPUiiWq1SrVep2atVQF1ByoOw5K0hiN2eXWWH4RMR3gonAJifwckjg0++207TibYOc2iqs74catpxfBW95ztd1+xTvpu+qdRBLpV6qwchG7kENUq1BYQtRDpO/juA7C9XDbW4h0d+MC3rI4OqemwIA6NkZ4bJTg4FFqYxNUDx2hPJmlnJ2lXCxQNoaKK6kkYtT8CHVHULeWQBtCrQi0Rlkza7SeV0aXjbHGWFO3xmAtLcKQApsU0OoJQdRxSAlJU7mGVXWCZJobi1lxWgD/Tgjb76VZu2Mn6dfuIDowSHTjAP76QSIdbbhNGRpx4X9VfwuYQh4zt4CZmsMu5tALOdTkFMH4JNVjY1THJ6nkcpRKZSrCUolGqEZ9qn6EqrTUjSEwJtTGHDPWHgB7zFg7hSWLtVNWm6y2dh5sThuNNRZjDMboxi4Ua6PGmoSFTgtbEXKr6zhnRzzvoqjvt6SF5AsTh08fBWqJTo4qxfzTj5F5ei9JHJJuE4lVq4i2NBNJJfGam3DicaTWCNsQQr1URM3nGi5dLKEqFQKlqBtNzXWoxaNU41FqCY9aqpnAKEJjF4w1R2xYG0LwooCDEnFACiYcIRvXFRZMI7qb5c1UdnmCbE/pFizH/xqIGrAADEkh7pRCAjallXqziviXragB2uoPlhx7WT7R9CZfOpmYFESVxZ88jn98hAgWD4O7LIIgGlN610P7EVTUJ/Q8dEuSUJ7YwmJRxowb9MuE+iUheMkR8oCAYVfIBcRvT5T+X+3JkoiiFOIeAfesCEDA7RJxu4Wmutbn1y2bEWK7jPtbHSlapBBJKWTGEcIVQlokFoQBcgYxh7ATmDArrMhKaSdBTjhCHJFSHHZBC9HYSyjFv5bJ/4eAzvzP0Jm9wmcAnAFwBsAZAGcAnAFwBsAZAGcA/F4e/xOhdbinPf6lAgAAAABJRU5ErkJggg=="/>
+                                                </defs>
+                                            </svg><span>USA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gr-card-footer">
+                                    <p class="gr-card-comments">I've been in this hostel for a month and here is the best hostel of all
+                                        Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent
+                                        Most importantly, those who work here are kind and good-natured.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="guests-reviews-item col-4 col-md-6 col-sm-3">
+                        <div class="gr-list-card">
+                            <div class="gr-card-images">
+                                <img src="images/ourika-marocco.jpg" alt="ourika-marocco" class="gr-card-image">
+                                <div class="gr-card-price"><a href="" class="gr-card-price-link">From <span>100 USD</span></a></div>
+                            </div>
+                            <div class="gr-card-content">
+                                <div class="gr-card-middle">
+                                    <div class="gr-card-header">
+                                        <a href="" class="gr-card-title-link"><h5 class="gr-card-title">Rokoko Hotel</h5></a>
+                                        <p class="gr-card-subtitle">Ourika, Marocco</p>
+                                    </div>
+                                    <div class="gr-card-score">
+                                        <div class="gr-card-point"><span>9,1</span></div>
+                                        <p class="gr-card-reviews">815 reviews</p>
+                                    </div>
+                                </div>
+                                <div class="gr-card-user">
+                                    <div class="gr-card-usericon">
+                                        <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M27.0002.3333C12.2802.3333.3335 12.2799.3335 26.9999c0 14.72 11.9467 26.6667 26.6667 26.6667 14.72 0 26.6666-11.9467 26.6666-26.6667 0-14.72-11.9466-26.6666-26.6666-26.6666zm0 8c4.4266 0 8 3.5733 8 8 0 4.4266-3.5734 8-8 8-4.4267 0-8-3.5734-8-8 0-4.4267 3.5733-8 8-8zm0 37.8666c-6.6667 0-12.56-3.4133-16-8.5866.08-5.3067 10.6666-8.2134 16-8.2134 5.3066 0 15.92 2.9067 16 8.2134-3.44 5.1733-9.3334 8.5866-16 8.5866z" fill="#BFBFBF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="gr-card-userprofile">
+                                        <p class="gr-card-username">Anika Messer</p>
+                                        <div class="gr-card-nationality">
+                                            <svg class="gr-card-nationality-flag" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M0 18.26H18V0.26H0V18.26Z" fill="url(#pattern2)"/>
+                                                <defs>
+                                                    <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image2" transform="scale(0.015625)"/>
+                                                    </pattern>
+                                                    <image id="image2" width="64" height="64" xlink:href="data:image/png;base64,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"/>
+                                                </defs>
+                                            </svg><span>Germany</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gr-card-footer">
+                                    <p class="gr-card-comments">Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy access to all the surrounding historical sites. Staff is fantastic. Will definitely stay at this location during my next stay in Marocco.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="gr-block-nav">
+                    <button class="homes-nav-btn visible-btn clickable-btn">
+                        <svg class="nav-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#F3F3F4"/>
+                            <path d="M15.9412 29.8235L22.1 21.6118a2.0001 2.0001 0 000-2.4L15.9412 11" stroke="#383838" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <button class="homes-nav-btn visible-btn clickable-btn">
+                        <svg class="nav-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#F3F3F4"/>
+                            <path d="M15.9412 29.8235L22.1 21.6118a2.0001 2.0001 0 000-2.4L15.9412 11" stroke="#383838" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="gr-card-slider">
+                <div class="gr-card-slide"><a href=" " class="gr-card-slide-item active"><span></span></a></div>
+                <div class="gr-card-slide"><a href=" " class="gr-card-slide-item"><span></span></a></div>
+                <div class="gr-card-slide"><a href=" " class="gr-card-slide-item"><span></span></a></div>
+                <div class="gr-card-slide"><a href=" " class="gr-card-slide-item"><span></span></a></div>
+            </div>
+        </div>
+    </section>
 </section>
 <footer class="footer">
     <div class="container">
